@@ -51,8 +51,21 @@
                     }
                 });
             });
-
         });
+
+        if ($('.detail-text').length > 0) {
+            var api = $('.detail-text').data('jsp');
+            if (api) {
+                api.destroy();
+                $('.detail-text').jScrollPane({
+                    autoReinitialise: true
+                });
+            } else {
+                $('.detail-text').jScrollPane({
+                    autoReinitialise: true
+                });
+            }
+        }
     });
 
 })(jQuery);

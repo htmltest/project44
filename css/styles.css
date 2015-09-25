@@ -93,15 +93,50 @@ header {text-align:center; padding:84px 0 0 0; font-size:0; line-height:0; lette
 .content-menu {padding:63px 0 44px 0; margin:0 0 0 -35px}
 .content-menu ul {display:table; width:100%; margin:0; padding:0; list-style:none}
 .content-menu li {display:table-cell; width:25%; margin:0; padding:0; border-left:35px solid transparent}
-.content-menu li a {display:block; background:#ce2541; color:#fff; text-align:center; height:100px; font-size:30px; text-decoration:none; line-height:100px}
-.content-menu li a:hover {background:#bb1833}
-.content-menu li.active a {background:#fff; color:#323232}
+.content-menu li a {display:block; background:#fff; color:#323232; text-align:center; height:100px; font-size:30px; text-decoration:none; line-height:100px}
+.content-menu li a:hover {background:#bb1833; color:#fff}
+.content-menu li.active a {background:#ce2541; color:#fff}
 .content-menu li span {display:inline-block; vertical-align:middle; margin:0 25px 0 0}
-.content-menu-live {width:74px; height:47px; background:url(../images/content-menu-live.png)}
-.content-menu li.active .content-menu-live {background:url(../images/content-menu-live-active.png)}
-.content-menu-off {width:53px; height:56px; background:url(../images/content-menu-off.png)}
-.content-menu li.active .content-menu-off {background:url(../images/content-menu-off-active.png)}
-.content-menu-fun {width:64px; height:58px; background:url(../images/content-menu-fun.png)}
-.content-menu li.active .content-menu-fun {background:url(../images/content-menu-fun-active.png)}
-.content-menu-game {width:72px; height:43px; background:url(../images/content-menu-game.png)}
-.content-menu li.active .content-menu-game {background:url(../images/content-menu-game-active.png)}
+.content-menu-live {width:74px; height:47px; background:url(../images/content-menu-live-active.png)}
+.content-menu li a:hover .content-menu-live,
+.content-menu li.active .content-menu-live {background:url(../images/content-menu-live.png)}
+.content-menu-off {width:53px; height:56px; background:url(../images/content-menu-off-active.png)}
+.content-menu li a:hover .content-menu-off,
+.content-menu li.active .content-menu-off {background:url(../images/content-menu-off.png)}
+.content-menu-fun {width:64px; height:58px; background:url(../images/content-menu-fun-active.png)}
+.content-menu li a:hover .content-menu-fun,
+.content-menu li.active .content-menu-fun {background:url(../images/content-menu-fun.png)}
+.content-menu-game {width:72px; height:43px; background:url(../images/content-menu-game-active.png)}
+.content-menu li a:hover .content-menu-game,
+.content-menu li.active .content-menu-game {background:url(../images/content-menu-game.png)}
+
+.detail {padding:72px 0}
+.detail-inner {background:#fff}
+.detail-inner:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.detail-photo {float:left; line-height:0; width:450px; position:relative}
+.detail-photo-zoom {display:block; width:36px; height:36px; position:absolute; right:0; bottom:0; background:url(../images/detail-photo-zoom.png)}
+.detail-video-zoom {display:block; width:95px; height:95px; position:absolute; left:50%; top:50%; margin:-48px 0 0 -48px; background:url(../images/detail-video-zoom.png)}
+.detail-container {margin:0 45px 0 505px}
+.detail-content {float:left; width:100%}
+.detail-header:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.detail-icon {float:right; margin:45px 0 0 45px; width:104px; height:104px; background:#ce2541 no-repeat center; border-radius:52px}
+.detail-icon-live {background-image:url(../images/content-menu-live.png)}
+.detail-icon-off {background-image:url(../images/content-menu-off.png)}
+.detail-icon-active {background-image:url(../images/content-menu-active.png)}
+.detail-icon-game {background-image:url(../images/content-menu-game.png)}
+.detail-type {font:28px/32px NissanAGMedium, verdana, geneva, sans-serif; color:#ce2541; padding:50px 0 0 0}
+.detail-title {font:48px/57px NissanAGBold, verdana, geneva, sans-serif; color:#000; text-transform:uppercase; padding:14px 0 0 0}
+.detail-title:after {content:""; display:block; width:110px; height:5px; background:#ce2541; margin:23px 0 0 0}
+.detail-text {max-height:215px; position:relative; overflow:hidden; font-size:24px; line-height:36px; margin:41px 0 0 0}
+.detail-text a {color:#157ac5; text-decoration:none}
+.detail-text a:hover {color:#c71c44}
+.detail-text p {margin:0; padding:36px 0 0 0}
+.detail-text p:first-child {padding:0}
+.detail-ctrl {padding:0 0 49px 0}
+.detail-ctrl:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.detail-rate {float:left; padding:0 0 0 62px; height:41px; margin:52px 0 0 0; background:url(../images/detail-rate.png) no-repeat; color:#999; font:37px/41px NissanAGMedium, verdana, geneva, sans-serif}
+.detail-rate.active {background-position:left -41px; color:#c71c44}
+.detail-back {float:right; font-size:28px; line-height:32px; padding:60px 0 0 0}
+.detail-share {float:right; height:32px; border-right:1px solid #999; padding:0 17px 0 0; margin:60px 22px 0 0}
+.detail-share a {display:block; width:29px; height:32px; background:url(../images/detail-share.png)}
+.detail-share a:hover {background-position:left -32px}
