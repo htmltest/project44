@@ -24,7 +24,7 @@
             $(this).find('input').prop('checked', $(this).hasClass('checked')).trigger('change');
         });
 
-        $('input[name="phone"]').val('').mask('+7 (999) 999-99-99');
+        $('input.maskPhone').mask('+7 (999) 999-99-99');
 
         $('.login-form form').validate();
 
