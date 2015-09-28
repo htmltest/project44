@@ -79,52 +79,67 @@
                     </div>
                     <!-- cabinet ideas END -->
 
-                    <div class="cabinet-side-new"><a href="#">предложить идею</a></div>
-
                 </div>
                 <!-- cabinet side END -->
 
                 <!-- cabinet inner -->
                 <div class="cabinet-inner">
-                    <div class="cabinet-inner-title">мои идеи</div>
+                    <div class="cabinet-inner-title">редактировать идею</div>
 
-                    <div class="cabinet-detail">
-                        <div class="detail-photo"><a href="#"><img src="files/cabinet-detail-photo.jpg" alt="" /><span class="detail-photo-zoom"></span></a></div>
-
-                        <div class="detail-container">
-                            <div class="detail-content">
-                                <div class="detail-header">
-                                    <div class="detail-icon detail-icon-off"></div>
-                                    <div class="detail-type">Офф-гейм</div>
-                                    <div class="detail-title">чемпионы cупер игры</div>
+                    <!-- idea edit -->
+                    <div class="idea-edit">
+                        <form action="#" method="post" enctype="multipart/form-data">
+                            <div class="idea-type">
+                                <div class="idea-type-radio">
+                                    <input type="radio" name="type" value="live" />
+                                    <span class="idea-type-live"></span>
+                                    <div class="idea-type-radio-hint">Как улучшить игру для болельщиков на стадионе/ дома/ в спортбаре</div>
+                                    Вживую
                                 </div>
-                                <div class="detail-text">
-                                    <div class="detail-text-inner">
-                                        <p>Болельщик делает селфи на смартфон через приложение и лучшие селфи отображаются на большом дисплее на стадионе во время игры. Выбери и проголосуй за лучшие идеи для футбольных болельщиков.</p>
-                                        <p>Болельщик делает селфи на смартфон через приложение и лучшие селфи отображаются на большом дисплее на стадионе во время игры. Выбери и проголосуй за лучшие идеи для футбольных болельщиков.</p>
-                                        <p>Болельщик делает селфи на смартфон через приложение и лучшие селфи отображаются на большом дисплее на стадионе во время игры. Выбери и проголосуй за лучшие идеи для футбольных болельщиков.</p>
-                                        <p><a href="#">https://www.youtube.com/watch?v=aTNEV_Sp7X0</a></p>
-                                    </div>
+                                <div class="idea-type-radio">
+                                    <input type="radio" name="type" value="off" checked="checked" />
+                                    <span class="idea-type-off"></span>
+                                    <div class="idea-type-radio-hint">Как скрасить жизнь между матчами для одного/для компании</div>
+                                    Офф-гейм
                                 </div>
-                                <div class="detail-ctrl">
-                                    <div class="detail-rate active">112</div>
-                                    <div class="detail-back"><a href="#">В галерею</a></div>
+                                <div class="idea-type-radio">
+                                    <input type="radio" name="type" value="fun" />
+                                    <span class="idea-type-fun"></span>
+                                    <div class="idea-type-radio-hint">Как добавить драйва в жизнь профессионального фаната</div>
+                                    Фан-клуб
                                 </div>
-                                <div class="detail-ctrl">
-                                    <div class="gallery-item-profile-status">
-                                        <span>12.10.2015</span>
-                                        <strong></strong>
-                                        <span>Опубликовано</span>
-                                    </div>
-                                    <div class="gallery-item-profile-tools">
-                                        <a href="#" class="gallery-item-profile-tools-share"></a>
-                                        <a href="#" class="gallery-item-profile-tools-edit"></a>
-                                        <a href="#" class="gallery-item-profile-tools-delete"></a>
-                                    </div>
+                                <div class="idea-type-radio">
+                                    <input type="radio" name="type" value="game" />
+                                    <span class="idea-type-game"></span>
+                                    <div class="idea-type-radio-hint">Как улучшить твою собственную игру или игру твоих детей</div>
+                                    Игра
                                 </div>
                             </div>
-                        </div>
+
+                            <div class="idea-edit-label">Название</div>
+                            <div class="idea-edit-input"><input type="text" name="name" value="Чемпионы супер игры" /></div>
+
+                            <div class="idea-edit-label">Моя идея</div>
+                            <div class="idea-edit-input"><textarea name="text" cols="5" rows="10">Болельщик делает селфи на смартфон через приложение и лучшие селфи отображаются на большом дисплее на стадионе во время игры. Выбери и проголосуй за лучшие идеи для футбольных болельщиков. Вместе мы сделаем жизнь футбольного фаната ярче и технологичнее. Выбери и проголосуй за лучшие идеи для футбольных болельщиков.</textarea></div>
+
+                            <div class="idea-edit-label">Ссылка на видео</div>
+                            <div class="idea-edit-input"><input type="text" name="video" value="http://" /></div>
+
+                            <div class="idea-edit-preview"></div>
+
+                            <div class="idea-edit-ctrl">
+                                <div class="idea-edit-img">
+                                    <div class="idea-edit-img-file">
+                                        <div class="idea-edit-img-file-btn">прикрепить файл<span></span></div>
+                                        <input type="file" name="file" id="fileupload" />
+                                    </div>
+                                    <div class="idea-edit-img-hint">(png, jpg / до 5Мб)</div>
+                                </div>
+                                <div class="idea-edit-submit"><input type="submit" value="сохранить" /></div>
+                            </div>
+                        </form>
                     </div>
+                    <!-- idea edit END -->
 
                 </div>
                 <!-- cabinet inner END -->

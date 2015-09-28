@@ -28,6 +28,18 @@
 
         $('.login-form form').validate();
 
+        $('.idea-type-radio input:checked').parent().addClass('checked');
+        $('.idea-type-radio').click(function() {
+            var curName = $(this).find('input').attr('name');
+            $('.idea-type-radio input[name="' + curName + '"]').parent().removeClass('checked');
+            $(this).addClass('checked');
+            $(this).find('input').prop('checked', true).trigger('change');
+        });
+
+        $('.idea-edit-img-file input').change(function() {
+            $('.idea-edit-preview').show().html($(this).val().replace(/.*(\/|\\)/, ''));
+        });
+
     });
 
     $(window).bind('load resize', function() {
