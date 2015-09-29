@@ -40,6 +40,21 @@
             $('.idea-edit-preview').show().html($(this).val().replace(/.*(\/|\\)/, ''));
         });
 
+        $('.detail-photo a').fancybox({
+            helpers: {
+                media: true,
+                overlay: {
+                    locked: false
+                }
+            },
+            tpl: {
+                closeBtn : '<a title="Закрыть" class="fancybox-item fancybox-close" href="javascript:;"></a>',
+                next     : '<a title="Следующая" class="fancybox-nav fancybox-next" href="javascript:;"><span></span></a>',
+                prev     : '<a title="Предыдущая" class="fancybox-nav fancybox-prev" href="javascript:;"><span></span></a>'
+            },
+            padding: 0
+        });
+
     });
 
     $(window).bind('load resize', function() {
