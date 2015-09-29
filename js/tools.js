@@ -27,6 +27,7 @@
         $('input.maskPhone').mask('+7 (999) 999-99-99');
 
         $('.login-form form').validate();
+        $('.idea-edit form').validate();
 
         $('.idea-type-radio input:checked').parent().addClass('checked');
         $('.idea-type-radio').click(function() {
@@ -59,14 +60,14 @@
 
     $(window).bind('load resize', function() {
         $('.gallery').each(function() {
-            $('.gallery-item').css({'min-height': 0 + 'px'});
+            $('.gallery-item-inner').css({'min-height': 0 + 'px'});
 
-            $('.gallery-item').each(function() {
+            $('.gallery-item-inner').each(function() {
                 var curBlock = $(this);
                 var curHeight = curBlock.height();
                 var curTop = curBlock.offset().top;
 
-                $('.gallery-item').each(function() {
+                $('.gallery-item-inner').each(function() {
                     var otherBlock = $(this);
                     if (otherBlock.offset().top == curTop) {
                         var newHeight = otherBlock.height();

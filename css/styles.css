@@ -58,8 +58,10 @@ header {text-align:center; padding:84px 0 0 0; font-size:0; line-height:0; lette
 .login-form-text {text-align:center; font:24px/28px NissanAGLight, verdana, geneva, sans-serif; color:#999}
 
 .gallery {font-size:0; line-height:0; letter-spacing:-1px; margin:0 0 0 -29px}
-.gallery-item {display:inline-block; vertical-align:top; background:#fff; width:405px; margin:28px 0 0 28px; padding:0 0 30px 0}
+.gallery-item {display:inline-block; vertical-align:top; width:33%; box-sizing:border-box; padding:28px 0 0 28px}
+.gallery-item-inner {background:#fff; padding:0 0 30px 0}
 .gallery-item-photo {position:relative}
+.gallery-item-photo img {width:100%}
 .gallery-item-icon {position:absolute; right:29px; bottom:-34px; width:68px; height:68px; border-radius:34px; background:#ce2541 no-repeat center}
 .gallery-item-icon-live {background-image:url(../images/gallery-item-icon-live.png)}
 .gallery-item-icon-off {background-image:url(../images/gallery-item-icon-off.png)}
@@ -71,7 +73,7 @@ header {text-align:center; padding:84px 0 0 0; font-size:0; line-height:0; lette
 .gallery-item-anonce {font-size:18px; line-height:22px; padding:17px 35px 0 29px; letter-spacing:0}
 .gallery-item-ctrl {padding:0 35px 0 29px}
 .gallery-item-ctrl:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
-.gallery-item-rate {float:left; padding:0 0 0 34px; height:27px; margin:24px 0 0 0; background:url(../images/gallery-item-rate.png) no-repeat; color:#999; font:24px/27px NissanAGMedium, verdana, geneva, sans-serif; letter-spacing:0}
+.gallery-item-rate {float:left; padding:0 0 0 34px; text-decoration:none; height:27px; margin:24px 0 0 0; background:url(../images/gallery-item-rate.png) no-repeat; color:#999; font:24px/27px NissanAGMedium, verdana, geneva, sans-serif; letter-spacing:0}
 .gallery-item-rate.active {background-position:left -27px; color:#c71c44}
 .gallery-item-detail {float:right; font-size:18px; line-height:25px; letter-spacing:0; padding:23px 0 0 0}
 .gallery-item-share {float:right; height:25px; border-right:1px solid #999; padding:1px 13px 0 0; margin:25px 14px 0 0}
@@ -87,6 +89,14 @@ header {text-align:center; padding:84px 0 0 0; font-size:0; line-height:0; lette
 .gallery-item-profile-tools-edit:hover {background-position:left -22px}
 .gallery-item-profile-tools-delete {display:inline-block; vertical-align:middle; width:23px; height:23px; background:url(../images/gallery-item-profile-tools-delete.png); margin:0 0 0 14px}
 .gallery-item-profile-tools-delete:hover {background-position:left -23px}
+
+@media (max-width:1100px) {
+    .gallery-item {width:50%}
+}
+
+@media (max-width:800px) {
+    .gallery-item {width:100%}
+}
 
 .pager {padding:73px 0 0 0; margin:0 -70px}
 .pager-inner {background:#fff; text-align:center; font:24px/51px NissanAGMedium, verdana, geneva, sans-serif; padding:27px 0 23px 0}
@@ -178,7 +188,7 @@ header {text-align:center; padding:84px 0 0 0; font-size:0; line-height:0; lette
 .cabinet-side-new a {display:block; width:100%; height:90px; background:#ce2541; text-align:center; text-decoration:none; text-transform:uppercase; color:#fff; font-size:24px; line-height:90px}
 .cabinet-side-new a:hover {background:#bb1833}
 
-.cabinet-inner {display:table-cell; vertical-align:top; border:1px solid #eee; background:#fff; box-sizing:border-box; padding:0 44px}
+.cabinet-inner {display:table-cell; vertical-align:top; border:1px solid #eee; background:#fff; box-sizing:border-box; padding:0 44px 30px 44px}
 .cabinet-inner-title {text-align:center; font:24px/36px NissanAGBold, verdana, geneva, sans-serif; text-transform:uppercase; border-bottom:1px solid #d8d8d8; padding:32px 0 29px 0}
 
 .idea-first {padding:181px 0 0 0}
@@ -206,8 +216,12 @@ header {text-align:center; padding:84px 0 0 0; font-size:0; line-height:0; lette
 .cabinet-profile-edit-submit input {width:100%; vertical-align:top; border:none; background:#ce2541; height:50px; margin:0; padding:0; outline:none; cursor:pointer; color:#fff; text-align:center; text-transform:uppercase; font:20px/50px NissanAGRegular, verdana, geneva, sans-serif; -webkit-appearance:none}
 .cabinet-profile-edit-submit input:hover {background-color:#bb1833}
 
-.cabinet-inner .gallery-item {border:1px solid #eee; padding:0 0 17px 0}
-.cabinet-inner .pager {padding:13px 0 19px 0}
+.cabinet-inner .gallery-item {width:50%}
+@media (max-width:1100px) {
+    .cabinet-inner .gallery-item {width:100%}
+}
+.cabinet-inner .gallery-item-inner {border:1px solid #eee; padding:0 0 17px 0}
+.cabinet-inner .pager {padding:13px 0 0 0; margin:0}
 
 .cabinet-detail {margin:45px 0 0 0}
 .cabinet-detail:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
@@ -270,6 +284,9 @@ header {text-align:center; padding:84px 0 0 0; font-size:0; line-height:0; lette
 .idea-edit-input input,
 .idea-edit-input textarea {border:1px solid #d8d8d8; vertical-align:middle; margin:0; padding:7px 18px; width:100%; height:50px; outline:none; box-sizing:border-box; background:#fff; color:#000; font:24px/36px NissanAGLight, verdana, geneva, sans-serif}
 .idea-edit-input textarea {height:200px; overflow:auto; resize:none; font-size:18px; line-height:24px}
+.idea-edit-input input.error,
+.idea-edit-input textarea.error {border-color:#ce2541}
+.idea-edit-input label.error {display:none !important}
 
 .idea-edit-preview {display:none; margin:3px 0 10px 0; position:relative; width:270px; line-height:0; font-size:12px; line-height:20px}
 .idea-edit-preview img {width:100%}
