@@ -22,6 +22,7 @@
         <script src="js/jquery.jscrollpane.min.js"></script>
         <script src="js/fancybox/jquery.fancybox.pack.js"></script>
         <script src="js/fancybox/helpers/jquery.fancybox-media.js"></script>
+        <script src="js/jquery.scrollTo-1.4.3.1-min.js"></script>
         <script src="js/tools.js"></script>
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -31,55 +32,58 @@
 
         <!-- wrapper -->
         <div class="wrapper">
-            <div class="title">Что значит быть футбольным болельщиком для тебя?</div>
-            <div class="text">Nissan, как и ты, любит футбол. Мы спонсируем легендарные российские клубы «Зенит» и «Спартак-Москва» и знаем, что именно болельщики делают игру незабываемой. И не важно, болеешь ли ты за свою команду на стадионе, в спорт-баре или дома. Один или с друзьями. В другом городе или стране. Может быть, ты сам играешь в футбол. Или твои дети. Все это не так важно. Важно, что игру создаешь ты.</div>
-            <header>
-                <div class="header-title">Галерея</div>
-                <div class="logo"><img src="images/logo.png" alt="" /></div>
-                <div class="header-user"><a href="#">Иван Иванов<span>Личный кабинет</span></a></div>
-                <div class="header-logout"><a href="#"><span>Выйти</span></a></div>
-            </header>
-            <div class="login-title">Галерея идей</div>
+            <div class="wrapper-inner">
 
-            <!-- content menu -->
-            <div class="content-menu">
-                <ul>
-                    <li><a href="#"><span class="content-menu-live"></span>Вживую</a></li>
-                    <li class="active"><a href="#"><span class="content-menu-off"></span>Офф-гейм</a></li>
-                    <li><a href="#"><span class="content-menu-fun"></span>Фан-клуб</a></li>
-                    <li><a href="#"><span class="content-menu-game"></span>Игра</a></li>
-                </ul>
-            </div>
-            <!-- content menu END -->
+                <div class="title">Что значит быть футбольным болельщиком для тебя?</div>
+                <div class="text">Nissan, как и ты, любит футбол. Мы являемся партнерами Лиги чемпионов UEFA и легендарных российских клубов «Зенит» и «Спартак-Москва». Мы знаем, что именно болельщики делают игру незабываемой. И не важно, болеешь ли ты за свою команду на стадионе, в спорт-баре или дома. Один или с друзьями. В другом городе или стране. Может быть, ты сам играешь в футбол. Или твои дети. Все это не так важно. Важно, что игру создаешь ты!</div>
+                <header>
+                    <div class="header-gallery"><a href="#">Галерея<span>Вернуться в галерею</span></a></div>
+                    <a href="#" class="logo"><span></span><div></div></a>
+                    <div class="header-user"><a href="#">Иван Иванов<span>Личный кабинет</span></a></div>
+                    <div class="header-logout"><a href="#"><span>Выйти</span></a></div>
+                </header>
+                <div class="login-title">Галерея идей</div>
 
-            <!-- detail -->
-            <div class="detail">
-                <div class="detail-inner">
+                <!-- content menu -->
+                <div class="content-menu">
+                    <ul>
+                        <li><a href="#"><span class="content-menu-live"></span>Вживую<div class="idea-type-radio-hint">Технологии для болельщиков на стадионе/ дома/ в спорт-баре</div></a></li>
+                        <li class="active"><a href="#"><span class="content-menu-off"></span>Офф-гейм<div class="idea-type-radio-hint">Как скрасить жизнь между матчами для одного/для компании</div></a></li>
+                        <li><a href="#"><span class="content-menu-fun"></span>Фан-клуб<div class="idea-type-radio-hint">Технологии для профессиональных фанатов</div></a></li>
+                        <li><a href="#"><span class="content-menu-game"></span>Игра<div class="idea-type-radio-hint">Технологии для тех, кто играет сам</div></a></li>
+                    </ul>
+                </div>
+                <!-- content menu END -->
 
-                    <div class="detail-photo"><img src="files/detail-photo.jpg" alt="" /></div>
+                <!-- detail -->
+                <div class="detail">
+                    <div class="detail-inner">
 
-                    <div class="detail-container">
-                        <div class="detail-content">
-                            <div class="detail-header">
-                                <div class="detail-icon detail-icon-off"></div>
-                                <div class="detail-type">Офф-гейм</div>
-                                <div class="detail-title">чемпионы</div>
-                            </div>
-                            <div class="detail-text">
-                                <div class="detail-text-inner">Болельщик делает селфи на смартфон через приложение и лучшие селфи отображаются на большом дисплее на стадионе во время игры. Выбери и проголосуй за лучшие идеи для футбольных болельщиков.</div>
-                            </div>
-                            <div class="detail-ctrl">
-                                <div class="detail-rate">34</div>
-                                <div class="detail-back"><a href="#">В галерею</a></div>
-                                <div class="detail-share"><a href="#"></a></div>
+                        <div class="detail-photo"><img src="files/detail-photo.jpg" alt="" /></div>
+
+                        <div class="detail-container">
+                            <div class="detail-content">
+                                <div class="detail-header">
+                                    <div class="detail-icon detail-icon-off"></div>
+                                    <div class="detail-type">Офф-гейм</div>
+                                    <div class="detail-title">чемпионы</div>
+                                </div>
+                                <div class="detail-text">
+                                    <div class="detail-text-inner">Болельщик делает селфи на смартфон через приложение и лучшие селфи отображаются на большом дисплее на стадионе во время игры. Выбери и проголосуй за лучшие идеи для футбольных болельщиков.</div>
+                                </div>
+                                <div class="detail-ctrl">
+                                    <a href="#" class="detail-rate">34<span>Голосовать</span></a>
+                                    <div class="detail-back"><a href="#">В галерею</a></div>
+                                    <div class="detail-share"><a href="#"><span>Поделиться</span></a></div>
+                                </div>
                             </div>
                         </div>
+
                     </div>
-
                 </div>
-            </div>
-            <!-- detail END -->
+                <!-- detail END -->
 
+            </div>
         </div>
         <!-- wrapper END -->
 

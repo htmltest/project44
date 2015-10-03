@@ -31,28 +31,33 @@
 
         <!-- wrapper -->
         <div class="wrapper">
-            <div class="title">Что значит быть футбольным болельщиком для тебя?</div>
-            <div class="text">Nissan, как и ты, любит футбол. Мы спонсируем легендарные российские клубы «Зенит» и «Спартак-Москва» и знаем, что именно болельщики делают игру незабываемой. И не важно, болеешь ли ты за свою команду на стадионе, в спорт-баре или дома. Один или с друзьями. В другом городе или стране. Может быть, ты сам играешь в футбол. Или твои дети. Все это не так важно. Важно, что игру создаешь ты.</div>
-            <header>
-                <div class="logo"><img src="images/logo.png" alt="" /></div>
-            </header>
-            <div class="login-title">регистрация</div>
-            <div class="login-form">
-                <form action="#" method="post">
-                    <div class="login-input"><input type="text" name="name" value="" required="required" /><span>Имя</span></div>
-                    <div class="login-input"><input type="text" name="lastname" value="" required="required" /><span>Фамилия</span></div>
-                    <div class="login-input"><input type="text" name="email" value="" required="required" /><span>e-mail</span></div>
-                    <div class="login-input"><input type="text" name="phone" value="" required="required" /><span>Телефон</span></div>
-                    <div class="login-input"><input type="password" name="password" value="" required="required" /><span>Пароль</span></div>
-                    <div class="login-input"><input type="password" name="repassword" value="" required="required" /><span>Повторите пароль</span></div>
-                    <div class="login-checkbox"><div><span><input type="checkbox" name="remember" /></span><a href="#">Я согласен с правилами конкурса и на обработку моих данных</a></div></div>
-                    <div class="login-submit"><input type="submit" value="создать аккаунт" /></div>
-                    <div class="login-links">
-                        Уже есть аккаунт?
-                        <img src="images/login-links-sep.png" alt="" />
-                        <a href="#">Войти</a>
-                    </div>
-                </form>
+            <div class="wrapper-inner">
+
+                <div class="title">Что значит быть футбольным болельщиком для тебя?</div>
+                <div class="text">Nissan, как и ты, любит футбол. Мы являемся партнерами Лиги чемпионов UEFA и легендарных российских клубов «Зенит» и «Спартак-Москва». Мы знаем, что именно болельщики делают игру незабываемой. И не важно, болеешь ли ты за свою команду на стадионе, в спорт-баре или дома. Один или с друзьями. В другом городе или стране. Может быть, ты сам играешь в футбол. Или твои дети. Все это не так важно. Важно, что игру создаешь ты!</div>
+                <header>
+                    <a href="#" class="logo"><span></span><div></div></a>
+                </header>
+                <div class="login-title">регистрация</div>
+                <div class="login-form">
+                    <div class="text-error">Все поля обязательны для заполнения.</div>
+                    <form action="#" method="post">
+                        <div class="login-input"><input type="text" name="name" value="" class="required" /><span>Имя</span></div>
+                        <div class="login-input"><input type="text" name="lastname" value="" class="required" /><span>Фамилия</span></div>
+                        <div class="login-input"><input type="text" name="email" value="" class="required email" /><span>Эл. адрес</span></div>
+                        <div class="login-input"><input type="text" name="phone" value="" class="required maskPhone" /><span>Телефон</span></div>
+                        <div class="login-input"><input type="password" name="password" id="password" value="" class="required" /><span>Пароль</span></div>
+                        <div class="login-input"><input type="password" name="repassword" value="" class="required" equalTo="#password" /><span>Повторите пароль</span></div>
+                        <div class="login-checkbox"><div><span><input type="checkbox" name="remember" class="required" /></span><a href="#">Я согласен с правилами конкурса и на обработку моих данных</a></div></div>
+                        <div class="login-submit"><input type="submit" value="создать аккаунт" /></div>
+                        <div class="login-links">
+                            Уже есть аккаунт?
+                            <img src="images/login-links-sep.png" alt="" />
+                            <a href="#">Войти</a>
+                        </div>
+                    </form>
+                </div>
+
             </div>
         </div>
         <!-- wrapper END -->

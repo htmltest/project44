@@ -22,152 +22,168 @@
         <script src="js/jquery.jscrollpane.min.js"></script>
         <script src="js/fancybox/jquery.fancybox.pack.js"></script>
         <script src="js/fancybox/helpers/jquery.fancybox-media.js"></script>
+        <script src="js/jquery.scrollTo-1.4.3.1-min.js"></script>
         <script src="js/tools.js"></script>
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
 
-    <body>
+    <body class="main-page">
 
         <!-- wrapper -->
         <div class="wrapper">
-            <div class="title">Что значит быть футбольным болельщиком для тебя?</div>
-            <div class="text">Nissan, как и ты, любит футбол. Мы спонсируем легендарные российские клубы «Зенит» и «Спартак-Москва» и знаем, что именно болельщики делают игру незабываемой. И не важно, болеешь ли ты за свою команду на стадионе, в спорт-баре или дома. Один или с друзьями. В другом городе или стране. Может быть, ты сам играешь в футбол. Или твои дети. Все это не так важно. Важно, что игру создаешь ты.</div>
-            <header>
-                <div class="header-title">Галерея</div>
-                <div class="logo"><img src="images/logo.png" alt="" /></div>
-                <div class="header-user"><a href="#">Иван Иванов<span>Личный кабинет</span></a></div>
-                <div class="header-logout"><a href="#"><span>Выйти</span></a></div>
-            </header>
-            <div class="login-title">Галерея идей</div>
+            <div class="wrapper-inner">
 
-            <!-- content menu -->
-            <div class="content-menu">
-                <ul>
-                    <li class="active"><a href="#"><span class="content-menu-live"></span>Вживую</a></li>
-                    <li><a href="#"><span class="content-menu-off"></span>Офф-гейм</a></li>
-                    <li><a href="#"><span class="content-menu-fun"></span>Фан-клуб</a></li>
-                    <li><a href="#"><span class="content-menu-game"></span>Игра</a></li>
-                </ul>
+                <div class="title">Что значит быть футбольным болельщиком для тебя?</div>
+                <div class="text">Nissan, как и ты, любит футбол. Мы являемся партнерами Лиги чемпионов UEFA и легендарных российских клубов «Зенит» и «Спартак-Москва». Мы знаем, что именно болельщики делают игру незабываемой. И не важно, болеешь ли ты за свою команду на стадионе, в спорт-баре или дома. Один или с друзьями. В другом городе или стране. Может быть, ты сам играешь в футбол. Или твои дети. Все это не так важно. Важно, что игру создаешь ты!</div>
+                <header>
+                    <div class="header-title">Галерея</div>
+                    <a href="#" class="logo"><span></span><div></div></a>
+                    <div class="header-user"><a href="#">Предложи свою идею</a></div>
+                </header>
+                <div class="login-title">Галерея идей</div>
+
+                <!-- content menu -->
+                <div class="content-menu">
+                    <ul>
+                        <li class="active"><a href="#"><span class="content-menu-live"></span>Вживую<div class="idea-type-radio-hint">Технологии для болельщиков на стадионе/ дома/ в спорт-баре</div></a></li>
+                        <li class="active"><a href="#"><span class="content-menu-off"></span>Офф-гейм<div class="idea-type-radio-hint">Как скрасить жизнь между матчами для одного/для компании</div></a></li>
+                        <li class="active"><a href="#"><span class="content-menu-fun"></span>Фан-клуб<div class="idea-type-radio-hint">Технологии для профессиональных фанатов</div></a></li>
+                        <li class="active"><a href="#"><span class="content-menu-game"></span>Игра<div class="idea-type-radio-hint">Технологии для тех, кто играет сам</div></a></li>
+                    </ul>
+                </div>
+                <!-- content menu END -->
+
+                <!-- gallery -->
+                <div class="gallery">
+
+                    <!-- gallery item -->
+                    <div class="gallery-item">
+                        <div class="gallery-item-inner">
+                            <div class="gallery-item-photo"><img src="files/gallery-1.jpg" alt="" /><div class="gallery-item-icon gallery-item-icon-live"></div></div>
+                            <div class="gallery-item-type">Вживую</div>
+                            <div class="gallery-item-text">
+                                <div class="gallery-item-title">Большой привет</div>
+                                <div class="gallery-item-anonce">Болельщик делает селфи на смартфон через приложение и лучшие селфи отображаются на большом дисплее на стадионе во время игры. Выбери...</div>
+                            </div>
+                            <div class="gallery-item-ctrl">
+                                <a href="#" class="gallery-item-rate">34<span>Голосовать</span></a>
+                                <div class="gallery-item-detail"><a href="#">Подробнее</a></div>
+                                <div class="gallery-item-share"><a href="#"><span>Поделиться</span></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- gallery item END -->
+
+                    <!-- gallery item -->
+                    <div class="gallery-item">
+                        <div class="gallery-item-inner">
+                            <div class="gallery-item-photo"><img src="files/gallery-2.jpg" alt="" /><div class="gallery-item-icon gallery-item-icon-off"></div></div>
+                            <div class="gallery-item-type">Офф-гейм</div>
+                            <div class="gallery-item-text">
+                                <div class="gallery-item-title">чемпионы супер игры</div>
+                                <div class="gallery-item-anonce">Болельщик делает селфи на смартфон через приложение и лучшие селфи отображаются на большом дисплее...</div>
+                            </div>
+                            <div class="gallery-item-ctrl">
+                                <a href="#" class="gallery-item-rate active">42<span>Голосовать</span></a>
+                                <div class="gallery-item-detail"><a href="#">Подробнее</a></div>
+                                <div class="gallery-item-share"><a href="#"><span>Поделиться</span></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- gallery item END -->
+
+                    <!-- gallery item -->
+                    <div class="gallery-item">
+                        <div class="gallery-item-inner">
+                            <div class="gallery-item-photo"><img src="files/gallery-3.jpg" alt="" /><div class="gallery-item-icon gallery-item-icon-fun"></div></div>
+                            <div class="gallery-item-type">Фан-клуб</div>
+                            <div class="gallery-item-text">
+                                <div class="gallery-item-title">На старт!</div>
+                                <div class="gallery-item-anonce">Болельщик делает селфи на смартфон через приложение и лучшие селфи отображаются на большом дисплее на стадионе во время игры. Выбери...</div>
+                            </div>
+                            <div class="gallery-item-ctrl">
+                                <a href="#" class="gallery-item-rate">12<span>Голосовать</span></a>
+                                <div class="gallery-item-detail"><a href="#">Подробнее</a></div>
+                                <div class="gallery-item-share"><a href="#"><span>Поделиться</span></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- gallery item END -->
+
+                    <!-- gallery item -->
+                    <div class="gallery-item">
+                        <div class="gallery-item-inner">
+                            <div class="gallery-item-photo"><img src="files/gallery-4.jpg" alt="" /><div class="gallery-item-icon gallery-item-icon-game"></div></div>
+                            <div class="gallery-item-type">Игра</div>
+                            <div class="gallery-item-text">
+                                <div class="gallery-item-title">Все на поле</div>
+                                <div class="gallery-item-anonce">Болельщик делает селфи на смартфон через приложение и лучшие селфи отображаются на большом дисплее на стадионе во время игры. Выбери...</div>
+                            </div>
+                            <div class="gallery-item-ctrl">
+                                <a href="#" class="gallery-item-rate active">51<span>Голосовать</span></a>
+                                <div class="gallery-item-detail"><a href="#">Подробнее</a></div>
+                                <div class="gallery-item-share"><a href="#"><span>Поделиться</span></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- gallery item END -->
+
+                    <!-- gallery item -->
+                    <div class="gallery-item">
+                        <div class="gallery-item-inner">
+                            <div class="gallery-item-photo"><img src="files/gallery-3.jpg" alt="" /><div class="gallery-item-icon gallery-item-icon-fun"></div></div>
+                            <div class="gallery-item-type">Фан-клуб</div>
+                            <div class="gallery-item-text">
+                                <div class="gallery-item-title">На старт!</div>
+                                <div class="gallery-item-anonce">Болельщик делает селфи на смартфон через приложение и лучшие селфи отображаются на большом дисплее на стадионе во время игры. Выбери...</div>
+                            </div>
+                            <div class="gallery-item-ctrl">
+                                <a href="#" class="gallery-item-rate">8<span>Голосовать</span></a>
+                                <div class="gallery-item-detail"><a href="#">Подробнее</a></div>
+                                <div class="gallery-item-share"><a href="#"><span>Поделиться</span></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- gallery item END -->
+
+                    <!-- gallery item -->
+                    <div class="gallery-item">
+                        <div class="gallery-item-inner">
+                            <div class="gallery-item-photo"><img src="files/gallery-1.jpg" alt="" /><div class="gallery-item-icon gallery-item-icon-live"></div></div>
+                            <div class="gallery-item-type">Вживую</div>
+                            <div class="gallery-item-text">
+                                <div class="gallery-item-title">Большой привет</div>
+                                <div class="gallery-item-anonce">Болельщик делает селфи на смартфон через приложение и лучшие селфи отображаются на большом дисплее на стадионе во время игры. Выбери...</div>
+                            </div>
+                            <div class="gallery-item-ctrl">
+                                <a href="#" class="gallery-item-rate active">112<span>Голосовать</span></a>
+                                <div class="gallery-item-detail"><a href="#">Подробнее</a></div>
+                                <div class="gallery-item-share"><a href="#"><span>Поделиться</span></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- gallery item END -->
+
+                </div>
+                <!-- gallery END -->
+
+                <!-- pager -->
+                <div class="pager">
+                    <div class="pager-inner">
+                        <a href="#" class="pager-prev"><em></em></a>
+                        <a href="#" class="active">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <span>...</span>
+                        <a href="#">14</a>
+                        <a href="#" class="pager-next"><em></em></a>
+                    </div>
+                </div>
+                <!-- pager END -->
+
             </div>
-            <!-- content menu END -->
-
-            <!-- gallery -->
-            <div class="gallery">
-
-                <!-- gallery item -->
-                <div class="gallery-item">
-                    <div class="gallery-item-inner">
-                        <div class="gallery-item-photo"><img src="files/gallery-1.jpg" alt="" /><div class="gallery-item-icon gallery-item-icon-live"></div></div>
-                        <div class="gallery-item-type">Вживую</div>
-                        <div class="gallery-item-title">Большой привет</div>
-                        <div class="gallery-item-anonce">Болельщик делает селфи на смартфон через приложение и лучшие селфи отображаются на большом дисплее на стадионе во время игры. Выбери...</div>
-                        <div class="gallery-item-ctrl">
-                            <a href="#" class="gallery-item-rate">34</a>
-                            <div class="gallery-item-detail"><a href="#">Подробнее</a></div>
-                            <div class="gallery-item-share"><a href="#"></a></div>
-                        </div>
-                    </div>
-                </div>
-                <!-- gallery item END -->
-
-                <!-- gallery item -->
-                <div class="gallery-item">
-                    <div class="gallery-item-inner">
-                        <div class="gallery-item-photo"><img src="files/gallery-2.jpg" alt="" /><div class="gallery-item-icon gallery-item-icon-off"></div></div>
-                        <div class="gallery-item-type">Офф-гейм</div>
-                        <div class="gallery-item-title">чемпионы супер игры</div>
-                        <div class="gallery-item-anonce">Болельщик делает селфи на смартфон через приложение и лучшие селфи отображаются на большом дисплее...</div>
-                        <div class="gallery-item-ctrl">
-                            <a href="#" class="gallery-item-rate active">42</a>
-                            <div class="gallery-item-detail"><a href="#">Подробнее</a></div>
-                            <div class="gallery-item-share"><a href="#"></a></div>
-                        </div>
-                    </div>
-                </div>
-                <!-- gallery item END -->
-
-                <!-- gallery item -->
-                <div class="gallery-item">
-                    <div class="gallery-item-inner">
-                        <div class="gallery-item-photo"><img src="files/gallery-3.jpg" alt="" /><div class="gallery-item-icon gallery-item-icon-fun"></div></div>
-                        <div class="gallery-item-type">Фан-клуб</div>
-                        <div class="gallery-item-title">На старт!</div>
-                        <div class="gallery-item-anonce">Болельщик делает селфи на смартфон через приложение и лучшие селфи отображаются на большом дисплее на стадионе во время игры. Выбери...</div>
-                        <div class="gallery-item-ctrl">
-                            <a href="#" class="gallery-item-rate">12</a>
-                            <div class="gallery-item-detail"><a href="#">Подробнее</a></div>
-                            <div class="gallery-item-share"><a href="#"></a></div>
-                        </div>
-                    </div>
-                </div>
-                <!-- gallery item END -->
-
-                <!-- gallery item -->
-                <div class="gallery-item">
-                    <div class="gallery-item-inner">
-                        <div class="gallery-item-photo"><img src="files/gallery-4.jpg" alt="" /><div class="gallery-item-icon gallery-item-icon-game"></div></div>
-                        <div class="gallery-item-type">Игра</div>
-                        <div class="gallery-item-title">Все на поле</div>
-                        <div class="gallery-item-anonce">Болельщик делает селфи на смартфон через приложение и лучшие селфи отображаются на большом дисплее на стадионе во время игры. Выбери...</div>
-                        <div class="gallery-item-ctrl">
-                            <a href="#" class="gallery-item-rate active">51</a>
-                            <div class="gallery-item-detail"><a href="#">Подробнее</a></div>
-                            <div class="gallery-item-share"><a href="#"></a></div>
-                        </div>
-                    </div>
-                </div>
-                <!-- gallery item END -->
-
-                <!-- gallery item -->
-                <div class="gallery-item">
-                    <div class="gallery-item-inner">
-                        <div class="gallery-item-photo"><img src="files/gallery-3.jpg" alt="" /><div class="gallery-item-icon gallery-item-icon-fun"></div></div>
-                        <div class="gallery-item-type">Фан-клуб</div>
-                        <div class="gallery-item-title">На старт!</div>
-                        <div class="gallery-item-anonce">Болельщик делает селфи на смартфон через приложение и лучшие селфи отображаются на большом дисплее на стадионе во время игры. Выбери...</div>
-                        <div class="gallery-item-ctrl">
-                            <a href="#" class="gallery-item-rate">8</a>
-                            <div class="gallery-item-detail"><a href="#">Подробнее</a></div>
-                            <div class="gallery-item-share"><a href="#"></a></div>
-                        </div>
-                    </div>
-                </div>
-                <!-- gallery item END -->
-
-                <!-- gallery item -->
-                <div class="gallery-item">
-                    <div class="gallery-item-inner">
-                        <div class="gallery-item-photo"><img src="files/gallery-1.jpg" alt="" /><div class="gallery-item-icon gallery-item-icon-live"></div></div>
-                        <div class="gallery-item-type">Вживую</div>
-                        <div class="gallery-item-title">Большой привет</div>
-                        <div class="gallery-item-anonce">Болельщик делает селфи на смартфон через приложение и лучшие селфи отображаются на большом дисплее на стадионе во время игры. Выбери...</div>
-                        <div class="gallery-item-ctrl">
-                            <a href="#" class="gallery-item-rate active">112</a>
-                            <div class="gallery-item-detail"><a href="#">Подробнее</a></div>
-                            <div class="gallery-item-share"><a href="#"></a></div>
-                        </div>
-                    </div>
-                </div>
-                <!-- gallery item END -->
-
-            </div>
-            <!-- gallery END -->
-
-            <!-- pager -->
-            <div class="pager">
-                <div class="pager-inner">
-                    <a href="#" class="pager-prev"><em></em></a>
-                    <a href="#" class="active">1</a>
-                    <a href="#">2</a>
-                    <a href="#">3</a>
-                    <a href="#">4</a>
-                    <span>...</span>
-                    <a href="#">14</a>
-                    <a href="#" class="pager-next"><em></em></a>
-                </div>
-            </div>
-            <!-- pager END -->
         </div>
         <!-- wrapper END -->
 

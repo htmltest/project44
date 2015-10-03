@@ -26,8 +26,30 @@
 
         $('input.maskPhone').mask('+7 (999) 999-99-99');
 
-        $('.login-form form').validate();
-        $('.idea-edit form').validate();
+        $('.login-form form').validate({
+          invalidHandler: function(form, validatorcalc) {
+              var errors = validatorcalc.numberOfInvalids();
+              if (errors) {
+                  $('.text-error').show();
+              }
+          }
+        });
+        $('.idea-edit form').validate({
+          invalidHandler: function(form, validatorcalc) {
+              var errors = validatorcalc.numberOfInvalids();
+              if (errors) {
+                  $('.text-error').show();
+              }
+          }
+        });
+        $('.cabinet-profile-edit-cols').validate({
+          invalidHandler: function(form, validatorcalc) {
+              var errors = validatorcalc.numberOfInvalids();
+              if (errors) {
+                  $('.text-error').show();
+              }
+          }
+        });
 
         $('.idea-type-radio input:checked').parent().addClass('checked');
         $('.idea-type-radio').click(function() {
@@ -56,18 +78,76 @@
             padding: 0
         });
 
+        $(document).on('click', 'a.gallery-item-rate, a.detail-rate', function(e) {
+            var trigger = $(this);
+            var idea = trigger.attr('rel');
+            $.ajax({
+                method: 'POST',
+                url: '/ajax/vote.php',
+                data: { idea: idea},
+                dataType: 'json'
+            }).done(function(r) {
+                if (r.s == 1) {
+                    if (r.c == '+') {
+                        trigger.addClass('active');
+                        _gaq.push(['_trackEvent', 'ftb_ideas', 'click', 'голос подан']);
+                    } else {
+                        trigger.removeClass('active');
+                        _gaq.push(['_trackEvent', 'ftb_ideas', 'click', 'голос отозван']);
+                    }
+                    trigger.html(r.v);
+                } else {
+                    alert(r.m);
+                }
+            });
+            e.preventDefault(e);
+        });
+
+        $(document).on('click', '.cabinet-profile-edit-avatar-upload', function(e) {
+            $('input[name="newAva"]').click();
+            e.preventDefault();
+        });
+
+        $('input[name="newAva"]').change(function() {
+            var options = {
+                success: function(data) {
+                    if (data.status == 1) {
+                        $('.avaImage').attr('src', data.pic);
+                        $('.cabinet-profile-avatar img').attr('src', data.pic);
+                    } else {
+                        alert(data.message, 'Ошибка');
+                    }
+                },
+                url:        '/ajax/newAvatar.php',
+                type:       'post',
+                dataType:   'json',
+                clearForm:  true,
+                resetForm:  true
+            };
+            $('input[name="newAva"]').parent().ajaxSubmit(options);
+        });
+
+        $('.idea-edit-preview a').click(function(e) {
+            if (confirm('Вы хотите удалить текущую фотографию?')) {
+                $('.idea-edit-preview input').prop('checked', true);
+                $('.idea-edit-preview').hide();
+            } else {
+            }
+            e.preventDefault();
+        });
+
     });
 
     $(window).bind('load resize', function() {
         $('.gallery').each(function() {
-            $('.gallery-item-inner').css({'min-height': 0 + 'px'});
+            $('.gallery-item-text').css({'min-height': 0 + 'px'});
 
-            $('.gallery-item-inner').each(function() {
+            $('.gallery-item-text').each(function() {
                 var curBlock = $(this);
                 var curHeight = curBlock.height();
                 var curTop = curBlock.offset().top;
 
-                $('.gallery-item-inner').each(function() {
+                $('.gallery-item-text').each(function() {
                     var otherBlock = $(this);
                     if (otherBlock.offset().top == curTop) {
                         var newHeight = otherBlock.height();
@@ -93,6 +173,12 @@
                     autoReinitialise: true
                 });
             }
+        }
+    });
+
+    $(window).load(function() {
+        if (!$('body').hasClass('main-page')) {
+            $.scrollTo($('.login-title'), 500);
         }
     });
 
