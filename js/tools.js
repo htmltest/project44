@@ -136,6 +136,18 @@
             e.preventDefault();
         });
 
+        $('.cabinet-profile-edit-avatar').click(function() {
+            $('.cabinet-profile-edit-avatar').toggleClass('open');
+        });
+
+        $('.gallery-item-ctrl-add').click(function() {
+            $(this).toggleClass('open');
+        });
+
+        $('.detail-ctrl-add').click(function() {
+            $(this).toggleClass('open');
+        });
+
     });
 
     $(window).bind('load resize', function() {

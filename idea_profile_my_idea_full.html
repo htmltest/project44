@@ -114,33 +114,36 @@
                                     <div class="detail-ctrl">
                                         <div class="detail-rate active">112</div>
                                         <div class="detail-back"><a href="#">В галерею</a></div>
-                                    </div>
-                                    <div class="detail-ctrl">
-                                        <div class="gallery-item-profile-status">
-                                            <span>12.10.2015</span>
-                                            <strong></strong>
-                                            <span>Опубликовано</span>
-                                        </div>
-                                        <div class="gallery-item-profile-tools">
-                                            <div class="gallery-item-profile-tools-share">
-                                                <script>
-                                                    document.write(VK.Share.button(
-                                                        {
-                                                            url: 'http://strvs.ru/game/',
-                                                            title: 'чемпионы супер игры',
-                                                            description: 'Болельщик делает селфи на смартфон через приложение и лучшие селфи отображаются на большом дисплее...',
-                                                            image: 'http://strvs.ru/game/files/cabinet-detail-photo.jpg',
-                                                            noparse: true
-                                                        },
-                                                        {
-                                                            type: 'custom',
-                                                            text: 'Поделиться'
-                                                        }
-                                                    ));
-                                                </script>
+                                        <div class="detail-ctrl-add">
+                                            <div class="detail-ctrl-add-inner">
+                                                <div class="gallery-item-profile-status">
+                                                    <span>12.10.2015</span>
+                                                    <strong></strong>
+                                                    <span>Опубликовано</span>
+                                                </div>
+                                                <script src="http://vk.com/js/api/share.js?90"></script>
+                                                <div class="gallery-item-profile-tools">
+                                                    <div class="gallery-item-profile-tools-share">
+                                                        <script>
+                                                            document.write(VK.Share.button(
+                                                                {
+                                                                    url: 'http://strvs.ru/game/',
+                                                                    title: 'чемпионы супер игры',
+                                                                    description: 'Болельщик делает селфи на смартфон через приложение и лучшие селфи отображаются на большом дисплее...',
+                                                                    image: 'http://strvs.ru/game/files/cabinet-detail-photo.jpg',
+                                                                    noparse: true
+                                                                },
+                                                                {
+                                                                    type: 'custom',
+                                                                    text: 'Поделиться'
+                                                                }
+                                                            ));
+                                                        </script>
+                                                    </div>
+                                                    <a href="#" class="gallery-item-profile-tools-edit"><span>Редактировать</span></a>
+                                                    <a href="#" class="gallery-item-profile-tools-delete"><span>Удалить</span></a>
+                                                </div>
                                             </div>
-                                            <a href="#" class="gallery-item-profile-tools-edit"><span>Редактировать</span></a>
-                                            <a href="#" class="gallery-item-profile-tools-delete"><span>Удалить</span></a>
                                         </div>
                                     </div>
                                 </div>

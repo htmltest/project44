@@ -5,14 +5,14 @@
 
 html {height:100%}
 
-body {height:100%; margin:0; padding:0; font:26px/40px NissanAGRegular, verdana, geneva, sans-serif; color:#000; background:#fff}
+body {height:100%; min-width:800px; margin:0; padding:0; font:26px/40px NissanAGRegular, verdana, geneva, sans-serif; color:#000; background:#fff}
 
 a {outline:none; color:#999}
 a:hover {color:#ce2541; text-decoration:none}
 
 img {border:none}
 
-.wrapper {padding:0 70px; min-height:100%; background:url(../images/bg.png) no-repeat center; background-size:cover}
+.wrapper {padding:0 70px; min-width:800px; min-height:100%; background:url(../images/bg.png) no-repeat center; background-size:cover}
 .wrapper-inner {padding:0 0 70px 0}
 
 @media (max-width:1200px) {
@@ -110,6 +110,7 @@ header {text-align:center; padding:60px 0 0 0; font-size:0; line-height:0; lette
 .gallery-item-anonce {font-size:18px; line-height:22px; padding:17px 35px 0 29px; letter-spacing:0}
 .gallery-item-ctrl {padding:0 35px 0 29px; color:#999}
 .gallery-item-ctrl:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.gallery-item-ctrl-add {float:left; width:100%}
 .gallery-item-rate {float:left; padding:0 0 0 34px; text-decoration:none; height:27px; margin:24px 0 0 0; position:relative; color:#999; font:24px/27px NissanAGMedium, verdana, geneva, sans-serif; letter-spacing:0}
 .gallery-item-rate:after {content:""; display:block; width:27px; height:27px; position:absolute; left:0; top:0; background:url(../images/gallery-item-rate.png) no-repeat}
 .gallery-item-rate:hover {color:#999}
@@ -150,6 +151,28 @@ header {text-align:center; padding:60px 0 0 0; font-size:0; line-height:0; lette
     .gallery-item-icon-off {background-image:url(../images/content-menu-off-mobile.png)}
     .gallery-item-icon-fun {background-image:url(../images/content-menu-fun-mobile.png)}
     .gallery-item-icon-game {background-image:url(../images/content-menu-game-mobile.png)}
+    .gallery-item-detail {position:relative}
+    .gallery-item-detail:before {content:""; display:inline-block; vertical-align:middle; width:1px; height:36px; background:#999; margin:0 36px 0 0}
+    .gallery-item-ctrl-add {float:right; width:50px; height:12px; background:url(../images/gallery-item-profile-tools-mobile.png); margin:35px 35px 0 0; cursor:pointer; position:relative}
+    .gallery-item-ctrl-add.open:before {content:""; display:block; width:100%; height:100%; position:fixed; left:0; top:0; background:rgba(0, 0, 0, .4); z-index:98}
+    .gallery-item-ctrl-add-inner {display:none; position:absolute; right:-50px; bottom:43px; width:570px; height:auto; padding:0 20px; background:#fff; border-radius:7px; font-size:34px; line-height:46px; text-align:left; z-index:99}
+    .gallery-item-ctrl-add-inner:before {content:""; display:block; width:0; height:0; position:absolute; right:63px; bottom:-12px; border-top:12px solid #fff; border-left:12px solid transparent; border-right:12px solid transparent}
+    .gallery-item-ctrl-add.open .gallery-item-ctrl-add-inner {display:block}
+    .gallery-item-profile-status {float:none; font-size:28px; line-height:70px; background:#eee; border-radius:7px 7px 0 0; margin:0 -20px; padding:0 20px}
+    .gallery-item-profile-tools {float:none; padding:0; line-height:46px}
+    .gallery-item-profile-tools a {display:block; background:none; width:auto; height:auto; padding:26px 0 33px 0; border-top:1px solid #d8d8d8}
+    .gallery-item-profile-tools a:first-child {border:none}
+    .gallery-item-profile-tools-share {display:block; height:auto}
+    .gallery-item-profile-tools-share a {border:none; display:block !important}
+    .gallery-item-profile-tools-share a:before {content:""; display:inline-block; vertical-align:middle; width:43px; height:46px; background:url(../images/gallery-item-share-mobile.png); margin:0 46px 0 12px}
+    .gallery-item-profile-tools .gallery-item-profile-tools-share a {width:auto; height:auto; background:none}
+    .gallery-item-profile-tools-edit {display:block; width:auto; height:auto; background:none; margin:0}
+    .gallery-item-profile-tools-edit:before {content:""; display:inline-block; vertical-align:middle; width:36px; height:36px; background:url(../images/gallery-item-profile-tools-edit-mobile.png); margin:0 45px 0 19px}
+    .gallery-item-profile-tools-delete {display:block; width:auto; height:auto; background:none; margin:0}
+    .gallery-item-profile-tools-delete:before {content:""; display:inline-block; vertical-align:middle; width:49px; height:48px; background:url(../images/gallery-item-profile-tools-delete-mobile.png); margin:0 39px 0 12px}
+    .gallery-item-profile-tools a span {display:inline-block; vertical-align:middle; font:34px/46px NissanAGRegular, verdana, geneva, sans-serif; position:relative !important; width:auto; height:auto; left:auto; top:auto; margin:0; background:none; color:#000}
+    .gallery-item-profile-tools a:hover span {display:inline-block}
+    .gallery-item-profile-tools a span:after {display:none}
 }
 
 @media (max-width:800px) {
@@ -259,6 +282,7 @@ header {text-align:center; padding:60px 0 0 0; font-size:0; line-height:0; lette
 .detail-text p:first-child {padding:0}
 .detail-ctrl {padding:0 0 49px 0; color:#999}
 .detail-ctrl:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.detail-ctrl-add {float:left; width:100%}
 .detail-rate {float:left; padding:0 0 0 62px; text-decoration:none; height:41px; margin:52px 0 0 0; color:#999; font:37px/41px NissanAGMedium, verdana, geneva, sans-serif; position:relative}
 .detail-rate:after {content:""; display:block; width:41px; height:41px; position:absolute; left:0; top:0; background:url(../images/detail-rate.png) no-repeat}
 .detail-rate:hover {color:#999}
@@ -381,6 +405,22 @@ header {text-align:center; padding:60px 0 0 0; font-size:0; line-height:0; lette
 @media (max-width:1200px) {
     .cabinet-profile-edit {padding:20px 0 0 0}
     .cabinet-profile-edit-avatar {float:none; margin:0 auto}
+    .cabinet-profile-edit-avatar.open:before {content:""; display:block; width:100%; height:100%; position:fixed; left:0; top:0; background:rgba(0, 0, 0, .4); z-index:98}
+    .cabinet-profile-edit-avatar:hover .cabinet-profile-edit-avatar-menu {display:none}
+    .cabinet-profile-edit-avatar-menu {left:50%; top:50%; width:570px; height:auto; padding:0 20px; margin-left:-305px; background:#fff; border-radius:7px; font-size:34px; line-height:46px; text-align:left; z-index:99}
+    .cabinet-profile-edit-avatar-menu:before {content:""; display:block; width:0; height:0; position:absolute; left:50%; margin-left:-12px; top:-12px; border-bottom:12px solid #fff; border-left:12px solid transparent; border-right:12px solid transparent}
+    .cabinet-profile-edit-avatar.open .cabinet-profile-edit-avatar-menu {display:block}
+    .cabinet-profile-edit-avatar-menu > span {display:none}
+    .cabinet-profile-edit-avatar-upload {display:block; background:none; width:auto; height:auto; padding:26px 0 33px 0}
+    .cabinet-profile-edit-avatar-upload:before {content:""; display:inline-block; vertical-align:middle; width:40px; height:38px; background:url(../images/cabinet-profile-edit-avatar-upload-mobile.png); margin:0 40px 0 27px}
+    .cabinet-profile-edit-avatar-upload span {display:inline-block; vertical-align:middle; font:34px/46px NissanAGRegular, verdana, geneva, sans-serif; position:relative; width:auto; height:auto; left:auto; top:auto; margin:0; background:none; color:#000}
+    .cabinet-profile-edit-avatar-upload:hover span {display:inline-block}
+    .cabinet-profile-edit-avatar-upload span:after {display:none}
+    .cabinet-profile-edit-avatar-delete {display:block; background:none; width:auto; height:auto; padding:26px 0 33px 0; border-top:1px solid #d8d8d8}
+    .cabinet-profile-edit-avatar-delete:before {content:""; display:inline-block; vertical-align:middle; width:49px; height:48px; background:url(../images/cabinet-profile-edit-avatar-delete-mobile.png); margin:0 37px 0 23px}
+    .cabinet-profile-edit-avatar-delete span {display:inline-block; vertical-align:middle; font:34px/46px NissanAGRegular, verdana, geneva, sans-serif; position:relative; width:auto; height:auto; left:auto; top:auto; margin:0; background:none; color:#000}
+    .cabinet-profile-edit-avatar-delete:hover span {display:inline-block}
+    .cabinet-profile-edit-avatar-delete span:after {display:none}
     .cabinet-profile-edit-cols {margin:0}
     .cabinet-profile-edit-col {float:none; width:auto; padding:0}
 }
@@ -419,6 +459,15 @@ header {text-align:center; padding:60px 0 0 0; font-size:0; line-height:0; lette
 @media (max-width:1200px) {
     .cabinet-detail .detail-photo {width:auto}
     .cabinet-detail .detail-container {margin:0}
+    .cabinet-detail .detail-back {position:relative}
+    .cabinet-detail .detail-back:before {content:""; display:inline-block; vertical-align:middle; width:1px; height:36px; background:#999; margin:0 36px 0 0}
+    .cabinet-detail .detail-ctrl-add {float:right; width:50px; height:12px; background:url(../images/gallery-item-profile-tools-mobile.png); margin:45px 35px 0 0; cursor:pointer; position:relative}
+    .cabinet-detail .detail-ctrl-add.open:before {content:""; display:block; width:100%; height:100%; position:fixed; left:0; top:0; background:rgba(0, 0, 0, .4); z-index:98}
+    .cabinet-detail .detail-ctrl-add-inner {display:none; position:absolute; right:-50px; bottom:43px; width:570px; height:auto; padding:0 20px; background:#fff; border-radius:7px; font-size:34px; line-height:46px; text-align:left; z-index:99}
+    .cabinet-detail .detail-ctrl-add-inner:before {content:""; display:block; width:0; height:0; position:absolute; right:63px; bottom:-12px; border-top:12px solid #fff; border-left:12px solid transparent; border-right:12px solid transparent}
+    .cabinet-detail .detail-ctrl-add.open .detail-ctrl-add-inner {display:block}
+    .cabinet-detail .gallery-item-profile-status {padding:0 20px}
+    .cabinet-detail .gallery-item-profile-tools {float:none; line-height:46px; padding:0}
 }
 
 .idea-edit {padding:45px 0}
