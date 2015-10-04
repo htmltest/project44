@@ -15,11 +15,21 @@ img {border:none}
 .wrapper {padding:0 70px; min-height:100%; background:url(../images/bg.png) no-repeat center; background-size:cover}
 .wrapper-inner {padding:0 0 70px 0}
 
+@media (max-width:1200px) {
+    .wrapper {padding:0 15px}
+    .wrapper-inner {padding:0}
+}
+
 .title {text-align:center; font-size:28px; font-family:NissanAGBold, verdana, geneva, sans-serif; text-transform:uppercase; padding:20px 0 0 0}
 .text {text-align:center; padding:20px 0 0 0}
 
+@media (max-width:800px) {
+    .title {display:none}
+    .text {display:none}
+}
+
 header {text-align:center; padding:60px 0 0 0; font-size:0; line-height:0; letter-spacing:-1px}
-.logo {display:inline-block; vertical-align:middle; width:158px; height:158px; position:relative}
+.logo {display:inline-block; vertical-align:middle; width:158px; height:158px; position:relative; border-radius:79px}
 .logo span {display:block; position:absolute; left:0; top:0; width:158px; height:158px; background:url(../images/logo-bg.png)}
 .logo div {position:absolute; left:50%; top:50%; width:90px; height:90px; margin:-45px 0 0 -45px; background:url(../images/logo.png)}
 .logo:hover span {animation:logo-anim 20s infinite linear}
@@ -33,7 +43,7 @@ header {text-align:center; padding:60px 0 0 0; font-size:0; line-height:0; lette
 .header-user a span:after {content:""; display:block; width:0; height:0; position:absolute; left:50%; bottom:-6px; margin:0 0 0 -7px; border-top:6px solid #323232; border-left:7px solid transparent; border-right:7px solid transparent}
 .header-user a:hover {color:#ce2541; background:url(../images/header-user-hover.png) repeat-x left bottom}
 .header-user a:hover span {display:block}
-.header-logout {display:inline-block; vertical-align:middle; border-left:1px solid #323232; margin:0 0 0 19px; padding:15px 0 0 19px; height:35px}
+.header-logout {display:inline-block; vertical-align:middle; border-left:1px solid #000; margin:0 0 0 19px; padding:15px 0 0 19px; height:35px}
 .header-logout a {display:block; width:27px; height:23px; position:relative; background:url(../images/header-logout.png)}
 .header-logout a:hover {background-position:left -23px}
 .header-logout a span {display:none; position:absolute; left:50%; margin-left:-60px; top:-58px; width:120px; height:35px; text-align:center; background:#323232; font:18px/35px NissanAGLight, verdana, geneva, sans-serif; color:#fff}
@@ -45,6 +55,15 @@ header {text-align:center; padding:60px 0 0 0; font-size:0; line-height:0; lette
 .header-gallery a span:after {content:""; display:block; width:0; height:0; position:absolute; left:50%; bottom:-6px; margin:0 0 0 -7px; border-top:6px solid #323232; border-left:7px solid transparent; border-right:7px solid transparent}
 .header-gallery a:hover {color:#ce2541; background:url(../images/header-user-hover.png) repeat-x left bottom}
 .header-gallery a:hover span {display:block}
+
+@media (max-width:800px) {
+    header {padding:40px 0 0 0}
+    .logo {width:100px; height:100px; border-radius:50px}
+    .logo span {width:100px; height:100px; background:url(../images/logo-bg-mobile.png)}
+    .logo div {width:60px; height:60px; margin:-30px 0 0 -30px; background:url(../images/logo-mobile.png)}
+    .header-title {display:none}
+    .header-gallery {display:none}
+}
 
 .login-title {text-align:center; font:30px/30px NissanAGBold, verdana, geneva, sans-serif; text-transform:uppercase; padding:79px 0 0 0}
 
@@ -70,6 +89,10 @@ header {text-align:center; padding:60px 0 0 0; font-size:0; line-height:0; lette
 .login-links {font:24px/30px NissanAGLight, verdana, geneva, sans-serif; text-align:center; padding:31px 0 0 0; color:#999}
 .login-links img {vertical-align:middle; margin:-6px 14px 0 14px}
 .login-form-text {text-align:center; font:24px/28px NissanAGLight, verdana, geneva, sans-serif; color:#999; margin:-3px 0 42px 0}
+
+@media (max-width:800px) {
+    .login-form {max-width:none; padding:20px 30px 0 30px}
+}
 
 .gallery {font-size:0; line-height:0; letter-spacing:-1px; margin:0 0 0 -28px}
 .gallery-item {display:inline-block; vertical-align:top; width:33.33%; box-sizing:border-box; padding:28px 0 0 28px}
@@ -101,26 +124,32 @@ header {text-align:center; padding:60px 0 0 0; font-size:0; line-height:0; lette
 .gallery-item-share {float:right; height:25px; border-right:1px solid #999; padding:1px 13px 0 0; margin:25px 14px 0 0}
 .gallery-item-share a {display:block; width:21px; height:23px; background:url(../images/gallery-item-share.png); position:relative}
 .gallery-item-share a:hover {background-position:left -23px}
-.gallery-item-share a span {display:none; position:absolute; left:50%; margin-left:-75px; top:-45px; width:150px; height:35px; text-align:center; background:#323232; font:18px/35px NissanAGLight, verdana, geneva, sans-serif; color:#fff}
+.gallery-item-share a span {display:none; position:absolute !important; left:50%; margin-left:-75px; top:-45px; width:150px; height:35px; text-align:center; background:#323232; font:18px/35px NissanAGLight, verdana, geneva, sans-serif; color:#fff}
 .gallery-item-share a span:after {content:""; display:block; width:0; height:0; position:absolute; left:50%; bottom:-6px; margin:0 0 0 -7px; border-top:6px solid #323232; border-left:7px solid transparent; border-right:7px solid transparent}
 .gallery-item-share a:hover span {display:block}
 .gallery-item-profile-status {float:left; font-size:16px; line-height:25px; letter-spacing:0; padding:43px 0 0 0}
 .gallery-item-profile-status span {display:inline-block; vertical-align:middle; opacity:.7}
 .gallery-item-profile-status strong {display:inline-block; vertical-align:middle; width:1px; height:25px; background:#999; margin:0 7px}
 .gallery-item-profile-tools {float:right; line-height:25px; padding:43px 0 0 0; white-space:nowrap}
-.gallery-item-profile-tools-share {display:inline-block; vertical-align:middle; width:21px; height:23px; background:url(../images/gallery-item-share.png)}
-.gallery-item-profile-tools-share:hover {background-position:left -23px}
+.gallery-item-profile-tools-share {display:inline-block; vertical-align:middle; height:23px}
+.gallery-item-profile-tools-share a {display:block; position:relative; width:21px; height:23px; background:url(../images/gallery-item-share.png)}
+.gallery-item-profile-tools-share a:hover {background-position:left -23px}
 .gallery-item-profile-tools-edit {display:inline-block; vertical-align:middle; width:21px; height:22px; background:url(../images/gallery-item-profile-tools-edit.png); margin:0 0 0 16px}
 .gallery-item-profile-tools-edit:hover {background-position:left -22px}
 .gallery-item-profile-tools-delete {display:inline-block; vertical-align:middle; width:23px; height:23px; background:url(../images/gallery-item-profile-tools-delete.png); margin:0 0 0 14px}
 .gallery-item-profile-tools-delete:hover {background-position:left -23px}
 .gallery-item-profile-tools a {position:relative; text-decoration:none}
-.gallery-item-profile-tools a span {display:none; position:absolute; left:50%; margin-left:-75px; top:-45px; width:150px; height:35px; text-align:center; background:#323232; font:18px/35px NissanAGLight, verdana, geneva, sans-serif; color:#fff}
+.gallery-item-profile-tools a span {display:none; position:absolute !important; left:50%; margin-left:-75px; top:-45px; width:150px; height:35px; text-align:center; background:#323232; font:18px/35px NissanAGLight, verdana, geneva, sans-serif; color:#fff}
 .gallery-item-profile-tools a span:after {content:""; display:block; width:0; height:0; position:absolute; left:50%; bottom:-6px; margin:0 0 0 -7px; border-top:6px solid #323232; border-left:7px solid transparent; border-right:7px solid transparent}
 .gallery-item-profile-tools a:hover span {display:block}
 
 @media (max-width:1100px) {
     .gallery-item {width:50%}
+    .gallery-item-icon {width:104px; height:104px; border-radius:52px; right:40px; bottom:-52px}
+    .gallery-item-icon-live {background-image:url(../images/content-menu-live-mobile.png)}
+    .gallery-item-icon-off {background-image:url(../images/content-menu-off-mobile.png)}
+    .gallery-item-icon-fun {background-image:url(../images/content-menu-fun-mobile.png)}
+    .gallery-item-icon-game {background-image:url(../images/content-menu-game-mobile.png)}
 }
 
 @media (max-width:800px) {
@@ -139,9 +168,25 @@ header {text-align:center; padding:60px 0 0 0; font-size:0; line-height:0; lette
 .pager-inner .pager-next em {left:22px; background-position:-11px top}
 .pager-inner .pager-next:hover em {background-position:-11px -18px}
 
+@media (max-width:1100px) {
+    .pager {margin:0; padding:0}
+    .pager-inner {background:none; font:36px/115px NissanAGRegular, verdana, geneva, sans-serif; padding:0; height:115px}
+    .pager-inner a,
+    .pager-inner span {display:none}
+    .pager-inner a.pager-prev {display:block; float:left; margin:0 0 0 40px; width:auto; height:115px; border-radius:0; padding:0 0 0 37px; text-decoration:none; color:#ce2541}
+    .pager-inner a.pager-prev em {width:15px; height:23px; left:0; top:50%; margin-top:-10px; background:url(../images/pager-arrows-mobile.png)}
+    .pager-inner a.pager-prev:after {content:"Назад"}
+    .pager-inner a.pager-next {display:block; float:right; margin:0 40px 0 0; width:auto; height:115px; border-radius:0; padding:0 37px 0 0; text-decoration:none; color:#ce2541}
+    .pager-inner a.pager-next em {width:15px; height:23px; left:auto; right:0; top:50%; margin-top:-10px; background:url(../images/pager-arrows-mobile.png) no-repeat -15px top}
+    .pager-inner a.pager-next:after {content:"Вперед"}
+    .pager-inner a:hover {background:none}
+    .pager-inner a.pager-prev:hover em {background-position:left top}
+    .pager-inner a.pager-next:hover em {background-position:-15px top}
+}
+
 .content-menu {padding:63px 0 44px 0; margin:0 0 0 -35px}
 .content-menu ul {display:table; width:100%; margin:0; padding:0; list-style:none}
-.content-menu li {display:table-cell; width:25%; margin:0; padding:0; border-left:35px solid transparent; position:relative; box-sizing:border-box}
+.content-menu li {display:table-cell; width:25%; margin:0; padding:0; border-left:35px solid transparent; position:relative; box-sizing:border-box; vertical-align:top}
 .content-menu li a {display:block; background:#fff; color:#000; text-align:center; height:100px; font-size:30px; text-decoration:none; line-height:100px}
 .content-menu li a:hover {background:#bb1833; color:#fff}
 .content-menu li.active a {background:#ce2541; color:#fff}
@@ -168,6 +213,27 @@ header {text-align:center; padding:60px 0 0 0; font-size:0; line-height:0; lette
 .content-menu-fun+.idea-type-radio-hint:after {left:50%; margin-left:-7px}
 .content-menu-game+.idea-type-radio-hint {width:259px; padding-right:5px; right:0}
 .content-menu-game+.idea-type-radio-hint:after {right:54px}
+
+@media (max-width:1200px) {
+    .content-menu {padding:0; margin:35px 0 0 0; border:1px solid #eee; background:#fff}
+    .content-menu li {border-left:none}
+    .content-menu li:before {content:""; display:block; width:1px; height:90px; background:#d8d8d8; position:absolute; left:0; top:10px}
+    .content-menu li:first-child:before {display:none}
+    .content-menu li a {font-size:24px; height:110px; line-height:28px; position:relative; background:none}
+    .content-menu li span {display:block; margin:0 auto}
+    .content-menu li span.content-menu-live {width:58px; height:37px; background:url(../images/content-menu-live-active-mobile.png) no-repeat left bottom; padding-top:21px; margin-bottom:10px}
+    .content-menu li a:hover span.content-menu-live,
+    .content-menu li.active span.content-menu-live {background:url(../images/content-menu-live-mobile.png) no-repeat left bottom}
+    .content-menu li span.content-menu-off {width:40px; height:43px; background:url(../images/content-menu-off-active-mobile.png) no-repeat left bottom; padding-top:17px; margin-bottom:8px}
+    .content-menu li a:hover span.content-menu-off,
+    .content-menu li.active span.content-menu-off {background:url(../images/content-menu-off-mobile.png) no-repeat left bottom}
+    .content-menu li span.content-menu-fun {width:50px; height:45px; background:url(../images/content-menu-fun-active-mobile.png) no-repeat left bottom; padding-top:17px; margin-bottom:6px}
+    .content-menu li a:hover span.content-menu-fun,
+    .content-menu li.active span.content-menu-fun {background:url(../images/content-menu-fun-mobile.png) no-repeat left bottom}
+    .content-menu li span.content-menu-game {width:60px; height:37px; background:url(../images/content-menu-game-active-mobile.png) no-repeat left bottom; padding-top:22px; margin-bottom:9px}
+    .content-menu li a:hover span.content-menu-game,
+    .content-menu li.active span.content-menu-game {background:url(../images/content-menu-game-mobile.png) no-repeat left bottom}
+}
 
 .detail {padding:72px 0 0 0}
 .detail-inner {background:#fff}
@@ -207,9 +273,17 @@ header {text-align:center; padding:60px 0 0 0; font-size:0; line-height:0; lette
 .detail-share {float:right; height:32px; border-right:1px solid #999; padding:0 17px 0 0; margin:60px 22px 0 0}
 .detail-share a {display:block; width:29px; height:32px; background:url(../images/detail-share.png); position:relative}
 .detail-share a:hover {background-position:left -32px}
-.detail-share a span {display:none; position:absolute; left:50%; margin-left:-75px; top:-45px; width:150px; height:35px; text-align:center; background:#323232; font:18px/35px NissanAGLight, verdana, geneva, sans-serif; color:#fff}
+.detail-share a span {display:none; position:absolute !important; left:50%; margin-left:-75px; top:-45px; width:150px; height:35px; text-align:center; background:#323232; font:18px/35px NissanAGLight, verdana, geneva, sans-serif; color:#fff}
 .detail-share a span:after {content:""; display:block; width:0; height:0; position:absolute; left:50%; bottom:-6px; margin:0 0 0 -7px; border-top:6px solid #323232; border-left:7px solid transparent; border-right:7px solid transparent}
 .detail-share a:hover span {display:block}
+
+@media (max-width:1200px) {
+    .detail-photo {float:none; width:auto}
+    .detail-photo img {width:100%}
+    .detail-container {margin:0; padding:0 40px}
+    .detail-icon {display:none}
+    .detail-text {max-height:none}
+}
 
 .cabinet {display:table; width:100%; margin:63px 0 0 0}
 .cabinet-side {display:table-cell; vertical-align:top; width:392px; padding:0 20px 0 0}
@@ -244,12 +318,37 @@ header {text-align:center; padding:60px 0 0 0; font-size:0; line-height:0; lette
 .cabinet-inner {display:table-cell; vertical-align:top; border:1px solid #eee; background:#fff; box-sizing:border-box; padding:0 44px 30px 44px}
 .cabinet-inner-title {text-align:center; font:24px/36px NissanAGBold, verdana, geneva, sans-serif; text-transform:uppercase; border-bottom:1px solid #d8d8d8; padding:32px 0 29px 0}
 
+@media (max-width:1200px) {
+    .cabinet {display:block}
+    .cabinet-side {display:block; width:auto; padding:0}
+    .cabinet-profile {padding:20px 0}
+    .cabinet-profile:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+    .cabinet-profile-avatar {float:left; margin:0 0 0 20px}
+    .cabinet-profile-name {margin:0 0 0 210px; text-align:left}
+    .cabinet-profile-contacts {margin:0 0 0 210px; text-align:left; padding:6px 60px 0 0}
+    .cabinet-profile-link {bottom:0}
+    .cabinet-ideas-header {display:none}
+    .cabinet-ideas {margin:10px 0 0 0}
+    .cabinet-ideas ul {display:table; width:100%; margin:0; padding:0; color:#fff; text-align:center; background:#ababab}
+    .cabinet-ideas ul li {display:table-cell; width:33.3%; padding:0; border-top:none; vertical-align:middle; height:130px; position:relative}
+    .cabinet-ideas ul li:before {content:""; display:block; width:1px; height:110px; background:#d8d8d8; position:absolute; left:0; top:10px}
+    .cabinet-ideas ul li:first-child:before {display:none}
+    .cabinet-ideas ul li span {display:block; float:none; width:auto; padding:20px 0 0 0; font-size:24px; line-height:28px}
+    .cabinet-ideas ul li strong {display:block; float:none; font-size:46px; line-height:50px; margin:-78px 0 0 0; font-family:NissanAGBold, verdana, geneva, sans-serif}
+
+    .cabinet-inner {display:block; padding:0 15px 60px 15px; margin:10px 0 0 0}
+}
+
 .idea-first {padding:181px 0 0 0}
 .idea-first-icon {width:104px; height:104px; margin:0 auto; background:url(../images/idea-first-icon.png)}
 .idea-first-text {font-size:24px; line-height:36px; text-align:center; padding:47px 0 0 0}
 .idea-first-link {text-align:center; padding:47px 0 0 0}
 .idea-first-link a {display:inline-block; width:440px; height:70px; background:#ce2541; text-decoration:none; color:#fff; font-size:24px; line-height:70px; text-transform:uppercase}
 .idea-first-link a:hover {background:#bb1833}
+
+@media (max-width:1200px) {
+    .idea-first {padding:60px 0 0 0}
+}
 
 .cabinet-profile-edit:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 .cabinet-profile-edit .text-error {text-align:left; font-size:20px; line-height:24px; padding:0 0 0 29px; font-family:NissanAGLight, verdana, geneva, sans-serif}
@@ -278,6 +377,13 @@ header {text-align:center; padding:60px 0 0 0; font-size:0; line-height:0; lette
 .cabinet-profile-edit-submit input {width:100%; vertical-align:top; border:none; background:#ce2541; height:50px; margin:0; padding:0; outline:none; cursor:pointer; color:#fff; text-align:center; text-transform:uppercase; font:20px/50px NissanAGRegular, verdana, geneva, sans-serif; -webkit-appearance:none}
 .cabinet-profile-edit-submit input:hover {background-color:#bb1833}
 #newAvaForm{position:absolute; left:-100000px}
+
+@media (max-width:1200px) {
+    .cabinet-profile-edit {padding:20px 0 0 0}
+    .cabinet-profile-edit-avatar {float:none; margin:0 auto}
+    .cabinet-profile-edit-cols {margin:0}
+    .cabinet-profile-edit-col {float:none; width:auto; padding:0}
+}
 
 .cabinet-inner .gallery-item {width:50%}
 @media (max-width:1100px) {
@@ -309,6 +415,11 @@ header {text-align:center; padding:60px 0 0 0; font-size:0; line-height:0; lette
 .cabinet-detail .detail-back {float:right; font-size:18px; line-height:27px; padding:37px 0 0 0}
 .cabinet-detail .gallery-item-profile-status {padding:21px 0 0 0}
 .cabinet-detail .gallery-item-profile-tools {float:right; line-height:25px; padding:21px 0 0 0}
+
+@media (max-width:1200px) {
+    .cabinet-detail .detail-photo {width:auto}
+    .cabinet-detail .detail-container {margin:0}
+}
 
 .idea-edit {padding:45px 0}
 .idea-edit form {margin:0; padding:0}
@@ -346,6 +457,28 @@ header {text-align:center; padding:60px 0 0 0; font-size:0; line-height:0; lette
 .idea-type-game+.idea-type-radio-hint {width:259px; right:-25px}
 .idea-type-game+.idea-type-radio-hint:after {right:54px}
 
+@media (max-width:1200px) {
+    .idea-type {margin:0 0 29px 0; border:1px solid #eee; background:#fff}
+    .idea-type-radio {border-left:none; height:110px; font-size:24px; line-height:28px; background:none}
+    .idea-type-radio:before {content:""; display:block; width:1px; height:90px; background:#d8d8d8; position:absolute; left:0; top:10px}
+    .idea-type-radio:first-child:before {display:none}
+    .idea-type-radio:hover:before,
+    .idea-type-radio.checked:before {display:none}
+    .idea-type-radio span {display:block; margin:0 auto}
+    .idea-type-radio span.idea-type-live {width:58px; height:37px; background:url(../images/content-menu-live-active-mobile.png) no-repeat left bottom; padding-top:21px; margin-bottom:10px}
+    .idea-type-radio:hover span.idea-type-live,
+    .idea-type-radio.checked span.idea-type-live {background:url(../images/content-menu-live-mobile.png) no-repeat left bottom}
+    .idea-type-radio span.idea-type-off {width:40px; height:43px; background:url(../images/content-menu-off-active-mobile.png) no-repeat left bottom; padding-top:17px; margin-bottom:8px}
+    .idea-type-radio:hover span.idea-type-off,
+    .idea-type-radio.checked span.idea-type-off {background:url(../images/content-menu-off-mobile.png) no-repeat left bottom}
+    .idea-type-radio span.idea-type-fun {width:50px; height:45px; background:url(../images/content-menu-fun-active-mobile.png) no-repeat left bottom; padding-top:17px; margin-bottom:6px}
+    .idea-type-radio:hover span.idea-type-fun,
+    .idea-type-radio.checked span.idea-type-fun {background:url(../images/content-menu-fun-mobile.png) no-repeat left bottom}
+    .idea-type-radio span.idea-type-game {width:60px; height:37px; background:url(../images/content-menu-game-active-mobile.png) no-repeat left bottom; padding-top:22px; margin-bottom:9px}
+    .idea-type-radio:hover span.idea-type-game,
+    .idea-type-radio.checked span.idea-type-game {background:url(../images/content-menu-game-mobile.png) no-repeat left bottom}
+}
+
 .idea-edit-label {font:20px/20px NissanAGLight, verdana, geneva, sans-serif; color:#999; padding:0 0 2px 5px}
 .idea-edit-input {padding:0 0 20px 0}
 .idea-edit-input input,
@@ -379,3 +512,7 @@ header {text-align:center; padding:60px 0 0 0; font-size:0; line-height:0; lette
 .idea-sent-icon {width:104px; height:104px; margin:0 auto; background:url(../images/idea-sent-icon.png)}
 .idea-sent-title {text-align:center; color:#ce2541; font:24px/36px NissanAGBold, verdana, geneva, sans-serif; text-transform:uppercase; padding:46px 0 0 0}
 .idea-sent-text {font-size:24px; line-height:36px; text-align:center; padding:12px 0 0 0}
+
+@media (max-width:1200px) {
+    .idea-sent {padding:60px 0 0 0}
+}

@@ -25,7 +25,7 @@
         <script src="js/jquery.scrollTo-1.4.3.1-min.js"></script>
         <script src="js/tools.js"></script>
 
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=800" />
     </head>
 
     <body>
@@ -79,7 +79,24 @@
                                 <div class="detail-ctrl">
                                     <a href="#" class="detail-rate active">112<span>Голосовать</span></a>
                                     <div class="detail-back"><a href="#">В галерею</a></div>
-                                    <div class="detail-share"><a href="#"><span>Поделиться</span></a></div>
+                                    <script src="http://vk.com/js/api/share.js?90"></script>
+                                    <div class="detail-share">
+                                        <script>
+                                            document.write(VK.Share.button(
+                                                {
+                                                    url: 'http://strvs.ru/game/',
+                                                    title: 'чемпионы',
+                                                    description: 'Болельщик делает селфи на смартфон через приложение и лучшие селфи отображаются на большом дисплее на стадионе во время игры. Выбери...',
+                                                    image: 'http://strvs.ru/game/files/detail-photo.jpg',
+                                                    noparse: true
+                                                },
+                                                {
+                                                    type: 'custom',
+                                                    text: 'Поделиться'
+                                                }
+                                            ));
+                                        </script>
+                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -25,7 +25,7 @@
         <script src="js/jquery.scrollTo-1.4.3.1-min.js"></script>
         <script src="js/tools.js"></script>
 
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=800" />
     </head>
 
     <body>
@@ -122,7 +122,23 @@
                                             <span>Опубликовано</span>
                                         </div>
                                         <div class="gallery-item-profile-tools">
-                                            <a href="#" class="gallery-item-profile-tools-share"><span>Поделиться</span></a>
+                                            <div class="gallery-item-profile-tools-share">
+                                                <script>
+                                                    document.write(VK.Share.button(
+                                                        {
+                                                            url: 'http://strvs.ru/game/',
+                                                            title: 'чемпионы супер игры',
+                                                            description: 'Болельщик делает селфи на смартфон через приложение и лучшие селфи отображаются на большом дисплее...',
+                                                            image: 'http://strvs.ru/game/files/cabinet-detail-photo.jpg',
+                                                            noparse: true
+                                                        },
+                                                        {
+                                                            type: 'custom',
+                                                            text: 'Поделиться'
+                                                        }
+                                                    ));
+                                                </script>
+                                            </div>
                                             <a href="#" class="gallery-item-profile-tools-edit"><span>Редактировать</span></a>
                                             <a href="#" class="gallery-item-profile-tools-delete"><span>Удалить</span></a>
                                         </div>

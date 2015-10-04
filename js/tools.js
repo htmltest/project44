@@ -165,13 +165,17 @@
             var api = $('.detail-text').data('jsp');
             if (api) {
                 api.destroy();
-                $('.detail-text').jScrollPane({
-                    autoReinitialise: true
-                });
+                if ($(window).width() > 1200) {
+                    $('.detail-text').jScrollPane({
+                        autoReinitialise: true
+                    });
+                }
             } else {
-                $('.detail-text').jScrollPane({
-                    autoReinitialise: true
-                });
+                if ($(window).width() > 1200) {
+                    $('.detail-text').jScrollPane({
+                        autoReinitialise: true
+                    });
+                }
             }
         }
     });
