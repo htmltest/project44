@@ -152,7 +152,7 @@ header {text-align:center; padding:60px 0 0 0; font-size:0; line-height:0; lette
     .gallery-item-icon-fun {background-image:url(../images/content-menu-fun-mobile.png)}
     .gallery-item-icon-game {background-image:url(../images/content-menu-game-mobile.png)}
     .gallery-item-detail {position:relative}
-    .gallery-item-detail:before {content:""; display:inline-block; vertical-align:middle; width:1px; height:36px; background:#999; margin:0 36px 0 0}
+    .cabinet .gallery-item-detail:before {content:""; display:inline-block; vertical-align:middle; width:1px; height:36px; background:#999; margin:0 36px 0 0}
     .gallery-item-ctrl-add {float:right; width:50px; height:12px; background:url(../images/gallery-item-profile-tools-mobile.png); margin:35px 35px 0 0; cursor:pointer; position:relative}
     .gallery-item-ctrl-add.open:before {content:""; display:block; width:100%; height:100%; position:fixed; left:0; top:0; background:rgba(0, 0, 0, .4); z-index:98}
     .gallery-item-ctrl-add-inner {display:none; position:absolute; right:-50px; bottom:43px; width:570px; height:auto; padding:0 20px; background:#fff; border-radius:7px; font-size:34px; line-height:46px; text-align:left; z-index:99}
@@ -506,7 +506,7 @@ header {text-align:center; padding:60px 0 0 0; font-size:0; line-height:0; lette
 .idea-type-game+.idea-type-radio-hint {width:259px; right:-25px}
 .idea-type-game+.idea-type-radio-hint:after {right:54px}
 
-@media (max-width:1200px) {
+@media (max-width:1600px) {
     .idea-type {margin:0 0 29px 0; border:1px solid #eee; background:#fff}
     .idea-type-radio {border-left:none; height:110px; font-size:24px; line-height:28px; background:none}
     .idea-type-radio:before {content:""; display:block; width:1px; height:90px; background:#d8d8d8; position:absolute; left:0; top:10px}
