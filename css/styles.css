@@ -32,7 +32,7 @@ img {border:none}
     .text {display:none}
 }
 
-header {text-align:center; margin:60px 0 0 0; font-size:0; line-height:0; letter-spacing:-1px; position:relative}
+header {text-align:center; padding:60px 0 0 0; font-size:0; line-height:0; letter-spacing:-1px; position:relative}
 .logo {display:inline-block; vertical-align:middle; width:158px; height:158px; position:relative; border-radius:79px}
 .logo span {display:block; position:absolute; left:0; top:0; width:158px; height:158px; background:url(../images/logo-bg.png)}
 .logo div {position:absolute; left:50%; top:50%; width:90px; height:90px; margin:-45px 0 0 -45px; background:url(../images/logo.png)}
@@ -40,8 +40,8 @@ header {text-align:center; margin:60px 0 0 0; font-size:0; line-height:0; letter
 
 @keyframes logo-anim {0%{transform:rotate(0deg)}100%{transform:rotate(-360deg)}}
 
-.header-title {position:absolute; right:50%; display:inline-block; vertical-align:middle; font-size:30px; line-height:30px; letter-spacing:0; margin:0 45px 0 0}
-.header-user-block {display:inline-block; vertical-align:top; position:absolute; left:50%; top:0; margin:0 0 0 79px; white-space:nowrap; line-height:158px}
+.header-title {position:absolute; right:50%; display:inline-block; vertical-align:middle; font-size:30px; line-height:158px; letter-spacing:0; margin:0 124px 0 0}
+.header-user-block {display:inline-block; vertical-align:top; position:absolute; left:50%; top:60px; margin:0 0 0 79px; white-space:nowrap; line-height:158px}
 .header-user {display:inline-block; vertical-align:middle; font-size:30px; line-height:30px; letter-spacing:0; margin:0 0 0 45px}
 .header-user a {color:#000; text-decoration:none; position:relative; background:url(../images/header-user.png) repeat-x left bottom}
 .header-user a span {display:none; position:absolute; left:50%; margin-left:-85px; top:-55px; width:170px; height:35px; text-align:center; background:#323232; font:18px/35px NissanAGLight, verdana, geneva, sans-serif; color:#fff}
@@ -72,16 +72,21 @@ header {text-align:center; margin:60px 0 0 0; font-size:0; line-height:0; letter
 }
 
 @media (max-width:480px) {
+    header {padding:20px 0 0 0}
     .logo {width:52px; height:52px; border-radius:50px}
     .logo span {width:52px; height:52px; background:url(../images/logo-bg-min.png)}
     .logo div {width:30px; height:30px; margin:-15px 0 0 -15px; background:url(../images/logo-min.png)}
     .header-user {margin-left:25px; font-size:18px; line-height:24px}
+
+    .header-logout {margin:0 0 0 22px; padding:6px 0 0 17px; height:19px}
+    .header-logout a {width:19px; height:16px; background:url(../images/header-logout-min.png)}
+    .header-logout a:hover {background-position:left -16px}
 }
 
 .login-title {text-align:center; font:30px/30px NissanAGBold, verdana, geneva, sans-serif; text-transform:uppercase; padding:79px 0 0 0}
 
 @media (max-width:480px) {
-    .login-title {font-size:19px; line-height:19px; padding:40px 0 0 0}
+    .login-title {font-size:19px; line-height:19px; padding:27px 0 0 0}
 }
 
 .login-form {max-width:585px; margin:0 auto; padding:20px 0 0 0}
@@ -110,6 +115,17 @@ header {text-align:center; margin:60px 0 0 0; font-size:0; line-height:0; letter
 @media (max-width:800px) {
     .login-form {max-width:none; padding:20px 30px 0 30px}
 }
+
+@media (max-width:480px) {
+    .login-form {padding-left:10px}
+    .login-input span {left:13px; top:9px; font-size:17px; line-height:20px}
+    .login-input input {display:block; height:36px; font-size:17px; line-height:20px; padding:8px 13px}
+    .login-submit input {font-size:16px; line-height:50px; height:50px}
+    .login-links {font-size:12px; line-height:30px}
+    .login-checkbox div {font-size:17px}
+    .login-form-text {font-size:17px; line-height:23px}
+}
+
 
 .gallery {font-size:0; line-height:0; letter-spacing:-1px; margin:0 0 0 -28px}
 .gallery-item {display:inline-block; vertical-align:top; width:33.33%; box-sizing:border-box; padding:28px 0 0 28px}
@@ -204,6 +220,8 @@ header {text-align:center; margin:60px 0 0 0; font-size:0; line-height:0; letter
 }
 
 @media (max-width:480px) {
+    .gallery {margin:0}
+    .gallery-item {padding:10px 0 0 0}
     .gallery-item-icon {width:52px; height:52px; border-radius:26px; right:20px; bottom:-26px}
     .gallery-item-icon-live {background-image:url(../images/content-menu-live-min.png)}
     .gallery-item-icon-off {background-image:url(../images/content-menu-off-min.png)}
@@ -212,6 +230,19 @@ header {text-align:center; margin:60px 0 0 0; font-size:0; line-height:0; letter
     .gallery-item-type {font-size:17px; line-height:20px; padding:10px 20px 0 20px}
     .gallery-item-title {font-size:17px; line-height:20px; padding:10px 20px 0 20px}
     .gallery-item-anonce {font-size:17px; line-height:20px; padding:10px 20px 0 20px}
+    .gallery-item-rate {padding:0 0 0 32px; height:23px; font-size:18px; line-height:23px}
+    .gallery-item-rate:after {width:23px; height:23px; background:url(../images/gallery-item-rate-min.png) no-repeat}
+    .gallery-item-rate.active:after {background-position:left -23px}
+    .gallery-item-detail {font-size:17px; line-height:18px}
+    .gallery-item-share {height:18px}
+    .gallery-item-share {padding:0 15px 0 0; margin:25px 17px 0 0}
+    .gallery-item-share a {display:block; width:18px; height:19px; background:url(../images/gallery-item-share-min.png)}
+    .gallery-item-share a:hover {background-position:left -19px}
+    .gallery-item-ctrl-add {width:25px; height:6px; background:url(../images/gallery-item-profile-tools-min.png); margin:32px 18px 0 0; cursor:pointer; position:relative}
+    .cabinet .gallery-item-detail:before {content:""; display:inline-block; vertical-align:middle; width:1px; height:18px; background:#999; margin:0 18px 0 0}
+    .gallery-item-ctrl {padding-right:18px}
+    .gallery-item-ctrl-add-inner {right:-150px}
+    .gallery-item-ctrl-add-inner:before {right:163px}
 }
 
 .pager {padding:73px 0 0 0; margin:0 -70px}
@@ -243,8 +274,11 @@ header {text-align:center; margin:60px 0 0 0; font-size:0; line-height:0; letter
 }
 
 @media (max-width:640px) {
-    .pager-inner a.pager-prev:after {content:""}
-    .pager-inner a.pager-next:after {content:""}
+    .pager-inner {height:57px; font-size:18px; line-height:57px}
+    .pager-inner a.pager-prev {margin:0 0 0 27px; padding:0 0 0 18px; height:57px}
+    .pager-inner a.pager-prev em {width:7px; height:12px; margin-top:-6px; background:url(../images/pager-arrows-min.png)}
+    .pager-inner a.pager-next {margin:0 27px 0 0; padding:0 18px 0 0; height:57px}
+    .pager-inner a.pager-next em {width:7px; height:12px; margin-top:-6px; background:url(../images/pager-arrows-min.png) no-repeat -7px top}
 }
 
 .content-menu {padding:63px 0 44px 0; margin:0 0 0 -35px}
@@ -320,7 +354,7 @@ header {text-align:center; margin:60px 0 0 0; font-size:0; line-height:0; letter
     .content-menu li.active span.content-menu-game {background:url(../images/content-menu-game-min.png) no-repeat left bottom}
 }
 
-.detail {padding:72px 0 0 0}
+.detail {padding:28px 0 0 0}
 .detail-inner {background:#fff}
 .detail-inner:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 .detail-photo {float:left; line-height:0; width:450px; position:relative}
@@ -376,6 +410,25 @@ header {text-align:center; margin:60px 0 0 0; font-size:0; line-height:0; letter
     .detail-title {font-size:24px; line-height:28px}
 }
 
+@media (max-width:480px) {
+    .detail {padding:11px 0 0 0}
+    .detail-video-zoom {width:48px; height:48px; margin:-24px 0 0 -24px; background:url(../images/detail-video-zoom-min.png)}
+    .detail-container {padding:0 20px}
+    .detail-type {font-size:17px; line-height:21px; padding:14px 0 0 0}
+    .detail-title {font-size:17px; line-height:21px; padding:5px 0 0 0}
+    .detail-title:after {margin:7px 0 0 0; width:55px; height:3px}
+    .detail-text {font-size:17px; line-height:21px; margin:10px 0 0 0}
+    .detail-text p {padding:21px 0 0 0}
+    .detail-text p:first-child {padding:0}
+    .detail-rate {padding:0 0 0 32px; height:23px; font-size:18px; line-height:23px; margin:22px 0 0 0}
+    .detail-rate:after {width:23px; height:23px; background:url(../images/gallery-item-rate-min.png) no-repeat}
+    .detail-rate.active:after {background-position:left -23px}
+    .detail-back {font-size:17px; line-height:18px; padding:24px 0 0 0}
+    .detail-share {padding:0 15px 0 0; margin:25px 17px 0 0; height:18px; font-size:17px; line-height:18px}
+    .detail-share a {display:block; width:18px; height:19px; background:url(../images/gallery-item-share-min.png)}
+    .detail-share a:hover {background-position:left -19px}
+}
+
 .cabinet {display:table; width:100%; margin:63px 0 0 0}
 .cabinet-side {display:table-cell; vertical-align:top; width:392px; padding:0 20px 0 0}
 
@@ -397,9 +450,11 @@ header {text-align:center; margin:60px 0 0 0; font-size:0; line-height:0; letter
 .cabinet-ideas-header:hover {color:#fff; background:#9b9b9b}
 .cabinet-ideas-header strong {display:inline-block; vertical-align:middle; border-left:1px solid #fff; padding:0 0 0 38px; margin:0 0 0 27px; font-weight:normal; font-family:NissanAGMedium, verdana, geneva, sans-serif}
 .cabinet-ideas ul {margin:0 0 -6px 0; padding:9px 30px 0 30px; list-style:none; color:#999}
-.cabinet-ideas ul li {margin:0; padding:23px 0 26px 0; border-top:1px solid #eee; width:100%}
+.cabinet-ideas ul li {margin:0; padding:0; border-top:1px solid #eee; width:100%}
 .cabinet-ideas ul li:first-child {border-top:none}
-.cabinet-ideas ul li:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.cabinet-ideas ul li a {display:block; text-decoration:none; color:#999; padding:23px 0 26px 0}
+.cabinet-ideas ul li a:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.cabinet-ideas ul li a:hover {color:#ce2541}
 .cabinet-ideas ul li span {float:left; width:283px; padding:0 0 0 9px}
 .cabinet-ideas ul li strong {float:left; font-weight:normal}
 
@@ -422,25 +477,28 @@ header {text-align:center; margin:60px 0 0 0; font-size:0; line-height:0; letter
     .cabinet-ideas-header {display:none}
     .cabinet-ideas {margin:10px 0 0 0}
     .cabinet-ideas ul {display:table; width:100%; margin:0; padding:0; color:#fff; text-align:center; background:#ababab}
-    .cabinet-ideas ul li {display:table-cell; width:33.3%; padding:0; border-top:none; vertical-align:middle; height:130px; position:relative}
-    .cabinet-ideas ul li:before {content:""; display:block; width:1px; height:110px; background:#d8d8d8; position:absolute; left:0; top:10px}
+    .cabinet-ideas ul li {display:table-cell; width:33.3%; padding:0; border-top:none; vertical-align:middle; height:66px; position:relative}
+    .cabinet-ideas ul li:before {content:""; display:block; width:1px; height:46px; background:#d8d8d8; position:absolute; left:0; top:10px}
     .cabinet-ideas ul li:first-child:before {display:none}
-    .cabinet-ideas ul li span {display:block; float:none; width:auto; padding:20px 0 0 0; font-size:24px; line-height:28px}
-    .cabinet-ideas ul li strong {display:block; float:none; font-size:46px; line-height:50px; margin:-78px 0 0 0; font-family:NissanAGBold, verdana, geneva, sans-serif}
+    .cabinet-ideas ul li a {color:#fff; height:66px; padding:0}
+    .cabinet-ideas ul li a:hover {color:#fff; background:#9b9b9b}
+    .cabinet-ideas ul li span {display:block; float:none; width:auto; padding:36px 0 0 0; font-size:12px; line-height:14px}
+    .cabinet-ideas ul li strong {display:block; float:none; font-size:23px; line-height:23px; margin:-39px 0 0 0; font-family:NissanAGBold, verdana, geneva, sans-serif}
 
     .cabinet-inner {display:block; padding:0 15px 60px 15px; margin:10px 0 0 0}
 }
 
 @media (max-width:640px) {
-    .cabinet-profile-avatar {float:none; margin:0; text-align:center}
-    .cabinet-profile-name {margin:0; text-align:center; padding:6px 0 0 0}
-    .cabinet-profile-contacts {margin:0; text-align:center; padding:6px 0 0 0}
-    .cabinet-profile-link {position:relative; margin:6px auto 0 auto; right:auto; bottom:auto}
-    .cabinet-ideas ul {display:block}
-    .cabinet-ideas ul li {display:block; width:auto; height:auto; border-top:1px solid #d8d8d8}
-    .cabinet-ideas ul li:first-child {border:none}
-    .cabinet-ideas ul li:before {display:none}
-    .cabinet-ideas ul li strong {margin:0}
+    .cabinet {margin:16px 0 0 0}
+    .cabinet-profile-avatar {margin:0 0 0 10px}
+    .cabinet-profile-avatar img {width:79px; height:79px; border-radius:40px}
+    .cabinet-profile-name {margin:0 0 0 106px; font-size:20px; line-height:24px}
+    .cabinet-profile-contacts {margin:0 0 0 106px; font-size:14px; line-height:16px; padding-right:40px}
+    .cabinet-profile-link {right:20px; bottom:0; width:16px; height:17px; background:url(../images/cabinet-profile-link-min.png)}
+    .cabinet-profile-link:hover {background-position:left -17px}
+    .cabinet-side-new {padding:10px 0 0 0}
+    .cabinet-side-new a {height:50px; font-size:16px; line-height:50px}
+    .cabinet-inner-title {font-size:12px; line-height:14px; padding:15px 0}
 }
 
 .idea-first {padding:181px 0 0 0}
@@ -455,7 +513,11 @@ header {text-align:center; margin:60px 0 0 0; font-size:0; line-height:0; letter
 }
 
 @media (max-width:640px) {
-    .idea-first-link a {width:100%; font-size:16px}
+    .idea-first {padding:30px 0 0 0}
+    .idea-first-link a {width:100%; font-size:16px; height:50px; line-height:50px}
+    .idea-first-icon {width:59px; height:59px; background:url(../images/idea-first-icon-min.png)}
+    .idea-first-text {font-size:17px; line-height:23px; padding:24px 0 0 0}
+    .idea-first-link {padding:30px 0 0 0}
 }
 
 .cabinet-profile-edit:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
@@ -515,6 +577,9 @@ header {text-align:center; margin:60px 0 0 0; font-size:0; line-height:0; letter
     .cabinet-profile-edit-avatar-upload {padding:10px 0}
     .cabinet-profile-edit-avatar-delete span,
     .cabinet-profile-edit-avatar-upload span {font-size:16px; line-height:24px}
+    .cabinet-profile-edit-field-label {display:none}
+    .cabinet-profile-edit-field {padding:10px 0 0 0}
+    .cabinet-profile-edit-field-input input {height:36px; font-size:17px; line-height:20px; padding:8px 13px}
 }
 
 .cabinet-inner .gallery-item {width:50%}
@@ -567,6 +632,29 @@ header {text-align:center; margin:60px 0 0 0; font-size:0; line-height:0; letter
     .cabinet-detail .gallery-item-profile-tools a {padding:10px 0}
     .cabinet-detail .gallery-item-profile-status,
     .cabinet-detail .gallery-item-profile-tools a span {font-size:16px; line-height:24px}
+}
+
+@media (max-width:480px) {
+    .cabinet-detail .detail {padding:11px 0 0 0}
+    .cabinet-detail .detail-video-zoom {width:48px; height:48px; margin:-24px 0 0 -24px; background:url(../images/detail-video-zoom-min.png)}
+    .cabinet-detail .detail-container {padding:0 20px}
+    .cabinet-detail .detail-type {font-size:17px; line-height:21px; padding:14px 0 0 0}
+    .cabinet-detail .detail-title {font-size:17px; line-height:21px; padding:5px 0 0 0}
+    .cabinet-detail .detail-title:after {margin:7px 0 0 0; width:55px; height:3px}
+    .cabinet-detail .detail-text {font-size:17px; line-height:21px; margin:10px 0 0 0}
+    .cabinet-detail .detail-text p {padding:21px 0 0 0}
+    .cabinet-detail .detail-text p:first-child {padding:0}
+    .cabinet-detail .detail-rate {padding:0 0 0 32px; height:23px; font-size:18px; line-height:23px; margin:22px 0 0 0}
+    .cabinet-detail .detail-rate:after {width:23px; height:23px; background:url(../images/gallery-item-rate-min.png) no-repeat}
+    .cabinet-detail .detail-rate.active:after {background-position:left -23px}
+    .cabinet-detail .detail-back {font-size:17px; line-height:18px; padding:24px 0 0 0}
+    .cabinet-detail .detail-share {padding:0 15px 0 0; margin:25px 17px 0 0; height:18px; font-size:17px; line-height:18px}
+    .cabinet-detail .detail-share a {display:block; width:18px; height:19px; background:url(../images/gallery-item-share-min.png)}
+    .cabinet-detail .detail-share a:hover {background-position:left -19px}
+    .cabinet-detail .detail-ctrl-add {float:right; width:25px; height:6px; background:url(../images/gallery-item-profile-tools-min.png); margin:32px 18px 0 0; cursor:pointer; position:relative}
+    .cabinet-detail .detail-back:before {width:1px; height:18px; background:#999; margin:0 18px 0 0}
+    .cabinet-detail .detail-ctrl-add-inner {right:-150px}
+    .cabinet-detail .detail-ctrl-add-inner:before {right:163px}
 }
 
 .idea-edit {padding:45px 0}
@@ -632,6 +720,7 @@ header {text-align:center; margin:60px 0 0 0; font-size:0; line-height:0; letter
 }
 
 @media (max-width:480px) {
+    .idea-edit {padding:20px 0}
     .idea-type-radio {height:55px; font-size:12px; line-height:14px}
     .idea-type-radio:before {height:35px}
     .idea-type-radio span.idea-type-live {width:29px; height:19px; background:url(../images/content-menu-live-active-min.png) no-repeat left bottom; padding-top:10px; margin-bottom:4px}
@@ -684,6 +773,14 @@ header {text-align:center; margin:60px 0 0 0; font-size:0; line-height:0; letter
     .idea-edit-submit {display:block; width:100%; border:none}
 }
 
+@media (max-width:480px) {
+    .idea-edit-label {display:none}
+    .idea-edit-input input,
+    .idea-edit-input textarea {height:36px; font-size:17px; line-height:20px; padding:8px 13px}
+    .idea-edit-input textarea {height:100px}
+    .idea-edit-img-file {font-size:17px}
+}
+
 .idea-sent {padding:220px 0 0 0}
 .idea-sent-icon {width:104px; height:104px; margin:0 auto; background:url(../images/idea-sent-icon.png)}
 .idea-sent-title {text-align:center; color:#ce2541; font:24px/36px NissanAGBold, verdana, geneva, sans-serif; text-transform:uppercase; padding:46px 0 0 0}
@@ -691,4 +788,11 @@ header {text-align:center; margin:60px 0 0 0; font-size:0; line-height:0; letter
 
 @media (max-width:1200px) {
     .idea-sent {padding:60px 0 0 0}
+}
+
+@media (max-width:480px) {
+    .idea-sent {padding:30px 0 0 0}
+    .idea-sent-icon {width:57px; height:57px; background-size:100%}
+    .idea-sent-title {padding:23px 0 0 0; font-size:17px; line-height:23px}
+    .idea-sent-text {padding:6px 0 0 0; font-size:17px; line-height:23px}
 }

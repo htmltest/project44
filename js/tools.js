@@ -190,6 +190,17 @@
                 }
             }
         }
+
+        if ($(window).width() <= 640) {
+            $('.cabinet-profile-edit-field-input input').each(function() {
+                $(this).attr('placeholder', $(this).parents().filter('.cabinet-profile-edit-field').find('.cabinet-profile-edit-field-label').html());
+            });
+            $('.idea-edit-input input, .idea-edit-input textarea').each(function() {
+                $(this).attr('placeholder', $(this).parent().prev().html());
+            });
+        } else {
+            $('.idea-edit-input input, .idea-edit-input textarea').removeAttr('placeholder');
+        }
     });
 
     $(window).load(function() {
