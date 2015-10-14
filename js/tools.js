@@ -151,7 +151,7 @@
             }
         });
 
-        $('.detail-ctrl-add').click(function() {
+        $('.detail-ctrl-add').click(function(e) {
             var curBlock = $(this);
             if (curBlock.hasClass('open')) {
                 if ($(e.target).parents().filter('.detail-ctrl-add-inner').length == 0) {
