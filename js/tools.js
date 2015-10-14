@@ -140,12 +140,117 @@
             $('.cabinet-profile-edit-avatar').toggleClass('open');
         });
 
-        $('.gallery-item-ctrl-add').click(function() {
-            $(this).toggleClass('open');
+        $('.gallery-item-ctrl-add').click(function(e) {
+            var curBlock = $(this);
+            if (curBlock.hasClass('open')) {
+                if ($(e.target).parents().filter('.gallery-item-ctrl-add-inner').length == 0) {
+                    $('.gallery-item-ctrl-add.open').removeClass('open');
+                }
+            } else {
+                curBlock.addClass('open');
+            }
         });
 
         $('.detail-ctrl-add').click(function() {
-            $(this).toggleClass('open');
+            var curBlock = $(this);
+            if (curBlock.hasClass('open')) {
+                if ($(e.target).parents().filter('.detail-ctrl-add-inner').length == 0) {
+                    $('.detail-ctrl-add.open').removeClass('open');
+                }
+            } else {
+                curBlock.addClass('open');
+            }
+        });
+
+        $('.gallery-item-share > a').click(function(e) {
+            var curBlock = $(this).parent();
+            if (curBlock.hasClass('open')) {
+                curBlock.removeClass('open');
+            } else {
+                $('.gallery-item-share.open').removeClass('open');
+                curBlock.addClass('open');
+            }
+            e.preventDefault();
+        });
+
+        $(document).click(function(e) {
+            if ($(e.target).parents().filter('.gallery-item-share').length == 0) {
+                $('.gallery-item-share.open').removeClass('open');
+            }
+        });
+
+        $('.gallery-item-share-window-link-vk a').click(function(e) {
+            var url = $(this).attr('href');
+            var curBlock = $(this).parents().filter('.gallery-item');
+            url += 'url=' + encodeURIComponent(curBlock.find('.gallery-item-detail a').attr('href'));
+            url += '&title=' + encodeURIComponent(curBlock.find('.gallery-item-title').html());
+            url += '&description=' + encodeURIComponent(curBlock.find('.gallery-item-anonce').html());
+            url += '&image=' + encodeURIComponent(curBlock.find('.gallery-item-photo img').attr('src'));
+            window.open(url, 'displayWindow', 'width=700,height=400,left=200,top=100,location=no,directories=no,status=no,toolbar=no,menubar=no');
+            e.preventDefault();
+        });
+
+        $('.gallery-item-share-window-link-fb a').click(function(e) {
+            var url = $(this).attr('href');
+            var curBlock = $(this).parents().filter('.gallery-item');
+            url += '&p[url]=' + encodeURIComponent(curBlock.find('.gallery-item-detail a').attr('href'));
+            url += '&p[title]=' + encodeURIComponent(curBlock.find('.gallery-item-title').html());
+            url += '&p[summary]=' + encodeURIComponent(curBlock.find('.gallery-item-anonce').html());
+            url += '&p[images][0]=' + encodeURIComponent(curBlock.find('.gallery-item-photo img').attr('src'));
+            window.open(url, 'displayWindow', 'width=700,height=400,left=200,top=100,location=no,directories=no,status=no,toolbar=no,menubar=no');
+            e.preventDefault();
+        });
+
+        $('.gallery-item-share-window-link-tw a').click(function(e) {
+            var url = $(this).attr('href');
+            var curBlock = $(this).parents().filter('.gallery-item');
+            url += 'url=' + encodeURIComponent(curBlock.find('.gallery-item-detail a').attr('href'));
+            url += '&text=' + encodeURIComponent(curBlock.find('.gallery-item-title').html());
+            window.open(url, 'displayWindow', 'width=700,height=400,left=200,top=100,location=no,directories=no,status=no,toolbar=no,menubar=no');
+            e.preventDefault();
+        });
+
+        $('.detail-share > a').click(function(e) {
+            var curBlock = $(this).parent();
+            curBlock.toggleClass('open');
+            e.preventDefault();
+        });
+
+        $(document).click(function(e) {
+            if ($(e.target).parents().filter('.detail-share').length == 0) {
+                $('.detail-share.open').removeClass('open');
+            }
+        });
+
+        $('.detail-share-window-link-vk a').click(function(e) {
+            var url = $(this).attr('href');
+            var curBlock = $(this).parents().filter('.detail');
+            url += 'url=' + encodeURIComponent(curBlock.find('.detail-url').attr('href'));
+            url += '&title=' + encodeURIComponent(curBlock.find('.detail-title').html());
+            url += '&description=' + encodeURIComponent(curBlock.find('.detail-anonce').html());
+            url += '&image=' + encodeURIComponent(curBlock.find('.detail-photo img').attr('src'));
+            window.open(url, 'displayWindow', 'width=700,height=400,left=200,top=100,location=no,directories=no,status=no,toolbar=no,menubar=no');
+            e.preventDefault();
+        });
+
+        $('.detail-share-window-link-fb a').click(function(e) {
+            var url = $(this).attr('href');
+            var curBlock = $(this).parents().filter('.detail');
+            url += '&p[url]=' + encodeURIComponent(curBlock.find('.detail-url').attr('href'));
+            url += '&p[title]=' + encodeURIComponent(curBlock.find('.detail-title').html());
+            url += '&p[summary]=' + encodeURIComponent(curBlock.find('.detail-anonce').html());
+            url += '&p[images][0]=' + encodeURIComponent(curBlock.find('.detail-photo img').attr('src'));
+            window.open(url, 'displayWindow', 'width=700,height=400,left=200,top=100,location=no,directories=no,status=no,toolbar=no,menubar=no');
+            e.preventDefault();
+        });
+
+        $('.detail-share-window-link-tw a').click(function(e) {
+            var url = $(this).attr('href');
+            var curBlock = $(this).parents().filter('.detail');
+            url += 'url=' + encodeURIComponent(curBlock.find('.detail-url').attr('href'));
+            url += '&text=' + encodeURIComponent(curBlock.find('.detail-title').html());
+            window.open(url, 'displayWindow', 'width=700,height=400,left=200,top=100,location=no,directories=no,status=no,toolbar=no,menubar=no');
+            e.preventDefault();
         });
 
     });

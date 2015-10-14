@@ -83,10 +83,18 @@ header {text-align:center; padding:60px 0 0 0; font-size:0; line-height:0; lette
     .header-logout a:hover {background-position:left -16px}
 }
 
-.login-title {text-align:center; font:30px/30px NissanAGBold, verdana, geneva, sans-serif; text-transform:uppercase; padding:79px 0 0 0}
+.login-title {text-align:center; font:30px/30px NissanAGBold, verdana, geneva, sans-serif; text-transform:uppercase; padding:79px 0 0 0; position:relative}
+a.popular-sort {display:block; position:absolute; left:0; top:67px; height:50px; margin:0 0 0 22px; font:18px/50px NissanAGRegular, verdana, geneva; text-transform:none; text-decoration:none}
+a.popular-sort.active {margin:0; padding:0 50px 0 22px; background:#e2e2e2}
+a.popular-sort.active:after {content:""; display:block; position:absolute; right:19px; top:50%; margin-top:-6px; width:13px; height:12px; background:url(../images/popular-sort.png)}
+a.popular-sort span {text-decoration:none; color:#000; background:url(../images/dots.png) repeat-x left bottom}
+a.popular-sort:hover span {background:none}
+a.popular-sort.active span {background:none}
 
-@media (max-width:480px) {
+@media (max-width:640px) {
     .login-title {font-size:19px; line-height:19px; padding:27px 0 0 0}
+    a.popular-sort {display:block; position:relative; left:auto; top:auto; margin:10px 22px 0 22px}
+    a.popular-sort.active {margin:10px 0 0 0}
 }
 
 .login-form {max-width:585px; margin:0 auto; padding:20px 0 0 0}
@@ -155,27 +163,38 @@ header {text-align:center; padding:60px 0 0 0; font-size:0; line-height:0; lette
 .gallery-item-rate span:after {content:""; display:block; width:0; height:0; position:absolute; left:50%; bottom:-6px; margin:0 0 0 -7px; border-top:6px solid #323232; border-left:7px solid transparent; border-right:7px solid transparent}
 .gallery-item-rate:hover span {display:block}
 .gallery-item-detail {float:right; font-size:18px; line-height:25px; letter-spacing:0; padding:23px 0 0 0}
-.gallery-item-share {float:right; height:25px; border-right:1px solid #999; padding:1px 13px 0 0; margin:25px 14px 0 0}
-.gallery-item-share a {display:block; width:21px; height:23px; background:url(../images/gallery-item-share.png); position:relative}
-.gallery-item-share a:hover {background-position:left -23px}
-.gallery-item-share a span {display:none; position:absolute !important; left:50%; margin-left:-75px; top:-45px; width:150px; height:35px; text-align:center; background:#323232; font:18px/35px NissanAGLight, verdana, geneva, sans-serif; color:#fff}
-.gallery-item-share a span:after {content:""; display:block; width:0; height:0; position:absolute; left:50%; bottom:-6px; margin:0 0 0 -7px; border-top:6px solid #323232; border-left:7px solid transparent; border-right:7px solid transparent}
-.gallery-item-share a:hover span {display:block}
+.gallery-item-share {float:right; height:25px; border-right:1px solid #999; padding:1px 13px 0 0; margin:25px 14px 0 0; position:relative}
+.gallery-item-profile-tools .gallery-item-share {float:none; border:none; padding:0; margin:0; display:inline-block; vertical-align:middle}
+.gallery-item-share > a {display:block; width:21px; height:23px; background:url(../images/gallery-item-share.png); position:relative}
+.gallery-item-share > a:hover {background-position:left -23px}
+.gallery-item-share > a span {display:none; position:absolute !important; left:50%; margin-left:-75px; top:-45px; width:150px; height:35px; text-align:center; background:#323232; font:18px/35px NissanAGLight, verdana, geneva, sans-serif; color:#fff}
+.gallery-item-share > a span:after {content:""; display:block; width:0; height:0; position:absolute; left:50%; bottom:-6px; margin:0 0 0 -7px; border-top:6px solid #323232; border-left:7px solid transparent; border-right:7px solid transparent}
+.gallery-item-share > a:hover span {display:block}
+.gallery-item-share.open > a:hover span {display:none}
+.gallery-item-share-window {position:absolute; left:50%; bottom:44px; width:158px; height:50px; margin-left:-99999px; background:#f1f1f1; border-bottom:5px solid #e2e2e2}
+.gallery-item-share.open .gallery-item-share-window {margin-left:-79px}
+.gallery-item-share-window:after {content:""; display:block; width:0; height:0; position:absolute; left:50%; bottom:-9px; margin-left:-6px; border-top:4px solid #e2e2e2; border-left:6px solid transparent; border-right:6px solid transparent}
+.gallery-item-share-window-link {float:left; width:33.33%; line-height:50px; text-align:center}
+.gallery-item-share-window-link a {display:inline-block; vertical-align:middle}
+.gallery-item-share-window-link a span {display:none}
+.gallery-item-share-window-link-vk a {width:21px; height:12px; background:url(../images/social-vk.png)}
+.gallery-item-share-window-link-vk a:hover {background-position:left -12px}
+.gallery-item-share-window-link-fb a {width:9px; height:18px; background:url(../images/social-fb.png); cursor:pointer}
+.gallery-item-share-window-link-fb a:hover {background-position:left -18px}
+.gallery-item-share-window-link-tw a {width:20px; height:17px; background:url(../images/social-tw.png)}
+.gallery-item-share-window-link-tw a:hover {background-position:left -17px}
 .gallery-item-profile-status {float:left; font-size:16px; line-height:25px; letter-spacing:0; padding:43px 0 0 0}
 .gallery-item-profile-status span {display:inline-block; vertical-align:middle; opacity:.7}
 .gallery-item-profile-status strong {display:inline-block; vertical-align:middle; width:1px; height:25px; background:#999; margin:0 7px}
 .gallery-item-profile-tools {float:right; line-height:25px; padding:43px 0 0 0; white-space:nowrap}
-.gallery-item-profile-tools-share {display:inline-block; vertical-align:middle; height:23px}
-.gallery-item-profile-tools-share a {display:block; position:relative; width:21px; height:23px; background:url(../images/gallery-item-share.png)}
-.gallery-item-profile-tools-share a:hover {background-position:left -23px}
 .gallery-item-profile-tools-edit {display:inline-block; vertical-align:middle; width:21px; height:22px; background:url(../images/gallery-item-profile-tools-edit.png); margin:0 0 0 16px}
 .gallery-item-profile-tools-edit:hover {background-position:left -22px}
 .gallery-item-profile-tools-delete {display:inline-block; vertical-align:middle; width:23px; height:23px; background:url(../images/gallery-item-profile-tools-delete.png); margin:0 0 0 14px}
 .gallery-item-profile-tools-delete:hover {background-position:left -23px}
-.gallery-item-profile-tools a {position:relative; text-decoration:none}
-.gallery-item-profile-tools a span {display:none; position:absolute !important; left:50%; margin-left:-75px; top:-45px; width:150px; height:35px; text-align:center; background:#323232; font:18px/35px NissanAGLight, verdana, geneva, sans-serif; color:#fff}
-.gallery-item-profile-tools a span:after {content:""; display:block; width:0; height:0; position:absolute; left:50%; bottom:-6px; margin:0 0 0 -7px; border-top:6px solid #323232; border-left:7px solid transparent; border-right:7px solid transparent}
-.gallery-item-profile-tools a:hover span {display:block}
+.gallery-item-profile-tools > a {position:relative; text-decoration:none}
+.gallery-item-profile-tools > a span {display:none; position:absolute !important; left:50%; margin-left:-75px; top:-45px; width:150px; height:35px; text-align:center; background:#323232; font:18px/35px NissanAGLight, verdana, geneva, sans-serif; color:#fff}
+.gallery-item-profile-tools > a span:after {content:""; display:block; width:0; height:0; position:absolute; left:50%; bottom:-6px; margin:0 0 0 -7px; border-top:6px solid #323232; border-left:7px solid transparent; border-right:7px solid transparent}
+.gallery-item-profile-tools > a:hover span {display:block}
 
 @media (max-width:1100px) {
     .gallery-item {width:50%}
@@ -193,19 +212,36 @@ header {text-align:center; padding:60px 0 0 0; font-size:0; line-height:0; lette
     .gallery-item-ctrl-add.open .gallery-item-ctrl-add-inner {display:block}
     .gallery-item-profile-status {float:none; font-size:28px; line-height:70px; background:#eee; border-radius:7px 7px 0 0; margin:0 -20px; padding:0 20px}
     .gallery-item-profile-tools {float:none; padding:0; line-height:46px}
-    .gallery-item-profile-tools a {display:block; background:none; width:auto; height:auto; padding:26px 0 33px 0; border-top:1px solid #d8d8d8}
-    .gallery-item-profile-tools a:first-child {border:none}
-    .gallery-item-profile-tools-share {display:block; height:auto}
-    .gallery-item-profile-tools-share a {border:none; display:block !important}
-    .gallery-item-profile-tools-share a:before {content:""; display:inline-block; vertical-align:middle; width:43px; height:46px; background:url(../images/gallery-item-share-mobile.png); margin:0 46px 0 12px}
-    .gallery-item-profile-tools .gallery-item-profile-tools-share a {width:auto; height:auto; background:none}
+    .gallery-item-profile-tools .gallery-item-share {display:block; width:auto; height:auto}
+    .gallery-item-profile-tools .gallery-item-share a {display:block; background:none; width:auto; height:auto; padding:26px 0 33px 0}
+    .gallery-item-profile-tools .gallery-item-share a:before {content:""; display:inline-block; vertical-align:middle; width:43px; height:46px; background:url(../images/gallery-item-share-mobile.png); margin:0 46px 0 12px}
+    .gallery-item-profile-tools > a {display:block; background:none; width:auto; height:auto; padding:26px 0 33px 0; border-top:1px solid #d8d8d8}
+    .gallery-item-profile-tools > a:first-child {border:none}
     .gallery-item-profile-tools-edit {display:block; width:auto; height:auto; background:none; margin:0}
     .gallery-item-profile-tools-edit:before {content:""; display:inline-block; vertical-align:middle; width:36px; height:36px; background:url(../images/gallery-item-profile-tools-edit-mobile.png); margin:0 45px 0 19px}
     .gallery-item-profile-tools-delete {display:block; width:auto; height:auto; background:none; margin:0}
     .gallery-item-profile-tools-delete:before {content:""; display:inline-block; vertical-align:middle; width:49px; height:48px; background:url(../images/gallery-item-profile-tools-delete-mobile.png); margin:0 39px 0 12px}
-    .gallery-item-profile-tools a span {display:inline-block; vertical-align:middle; font:34px/46px NissanAGRegular, verdana, geneva, sans-serif; position:relative !important; width:auto; height:auto; left:auto; top:auto; margin:0; background:none; color:#000}
-    .gallery-item-profile-tools a:hover span {display:inline-block}
-    .gallery-item-profile-tools a span:after {display:none}
+    .gallery-item-profile-tools > a span {display:inline-block; vertical-align:middle; font:34px/46px NissanAGRegular, verdana, geneva, sans-serif; position:relative !important; width:auto; height:auto; left:auto; top:auto; margin:0; background:none; color:#000}
+    .gallery-item-profile-tools > a:hover span {display:inline-block}
+    .gallery-item-profile-tools > a span:after {display:none}
+    .gallery-item-profile-tools .gallery-item-share.open {z-index:2}
+    .gallery-item-profile-tools .gallery-item-share a span {display:inline-block; vertical-align:middle; font:34px/46px NissanAGRegular, verdana, geneva, sans-serif; position:relative !important; width:auto; height:auto; left:auto; top:auto; margin:0; background:none; color:#000}
+    .gallery-item-profile-tools .gallery-item-share a:hover span {display:inline-block}
+    .gallery-item-profile-tools .gallery-item-share a span:after {display:none}
+    .gallery-item-profile-tools .gallery-item-share-window {left:-20px; bottom:auto; z-index:2; top:-74px; width:570px; padding:0 20px; height:auto; margin-left:-99999px; background:#fff; border-bottom:none; border-radius:7px}
+    .gallery-item-profile-tools .gallery-item-share.open .gallery-item-share-window {margin-left:0}
+    .gallery-item-profile-tools .gallery-item-share-window:after {display:none}
+    .gallery-item-profile-tools .gallery-item-share-window-link {float:none; width:100%; text-align:left; border-top:1px solid #d8d8d8}
+    .gallery-item-profile-tools .gallery-item-share-window-link:first-child {border:none}
+    .gallery-item-profile-tools .gallery-item-share-window-link a {display:block; position:relative; width:auto; line-height:130px; height:130px; background:none; padding:0}
+    .gallery-item-profile-tools .gallery-item-share-window-link a:hover {color:#ce2541}
+    .gallery-item-profile-tools .gallery-item-share-window-link a span {display:inline-block; vertical-align:middle}
+    .gallery-item-profile-tools .gallery-item-share-window-link-vk a:before {content:""; display:inline-block; vertical-align:middle; width:37px; height:23px; margin:0 37px 0 23px; background:url(../images/social-vk-mobile.png)}
+    .gallery-item-profile-tools .gallery-item-share-window-link-vk a:hover:before {background-position:left -23px}
+    .gallery-item-profile-tools .gallery-item-share-window-link-fb a:before {content:""; display:inline-block; vertical-align:middle; width:16px; height:33px; margin:0 49px 0 34px; background:url(../images/social-fb-mobile.png)}
+    .gallery-item-profile-tools .gallery-item-share-window-link-fb a:hover:before {background-position:left -33px}
+    .gallery-item-profile-tools .gallery-item-share-window-link-tw a:before {content:""; display:inline-block; vertical-align:middle; width:32px; height:28px; margin:0 39px 0 29px; background:url(../images/social-tw-mobile.png)}
+    .gallery-item-profile-tools .gallery-item-share-window-link-tw a:hover:before {background-position:left -28px}
 }
 
 @media (max-width:800px) {
@@ -214,9 +250,13 @@ header {text-align:center; padding:60px 0 0 0; font-size:0; line-height:0; lette
 
 @media (max-width:640px) {
     .gallery-item-ctrl-add-inner {width:auto; white-space:nowrap}
-    .gallery-item-profile-tools a {padding:10px 0}
+    .gallery-item-profile-tools > a {padding:10px 0}
     .gallery-item-profile-status,
-    .gallery-item-profile-tools a span {font-size:16px; line-height:24px}
+    .gallery-item-profile-tools > a span {font-size:16px; line-height:24px}
+    .gallery-item-profile-tools .gallery-item-share a {padding:10px 0}
+    .gallery-item-profile-tools .gallery-item-share-window {width:100%}
+    .gallery-item-profile-tools .gallery-item-share a span {font-size:16px; line-height:24px; letter-spacing:0}
+    .gallery-item-profile-tools .gallery-item-share-window-link a {height:72px; line-height:72px}
 }
 
 @media (max-width:480px) {
@@ -236,8 +276,8 @@ header {text-align:center; padding:60px 0 0 0; font-size:0; line-height:0; lette
     .gallery-item-detail {font-size:17px; line-height:18px}
     .gallery-item-share {height:18px}
     .gallery-item-share {padding:0 15px 0 0; margin:25px 17px 0 0}
-    .gallery-item-share a {display:block; width:18px; height:19px; background:url(../images/gallery-item-share-min.png)}
-    .gallery-item-share a:hover {background-position:left -19px}
+    .gallery-item-share > a {display:block; width:18px; height:19px; background:url(../images/gallery-item-share-min.png)}
+    .gallery-item-share > a:hover {background-position:left -19px}
     .gallery-item-ctrl-add {width:25px; height:6px; background:url(../images/gallery-item-profile-tools-min.png); margin:32px 18px 0 0; cursor:pointer; position:relative}
     .cabinet .gallery-item-detail:before {content:""; display:inline-block; vertical-align:middle; width:1px; height:18px; background:#999; margin:0 18px 0 0}
     .gallery-item-ctrl {padding-right:18px}
@@ -390,12 +430,27 @@ header {text-align:center; padding:60px 0 0 0; font-size:0; line-height:0; lette
 .detail-rate span:after {content:""; display:block; width:0; height:0; position:absolute; left:50%; bottom:-6px; margin:0 0 0 -7px; border-top:6px solid #323232; border-left:7px solid transparent; border-right:7px solid transparent}
 .detail-rate:hover span {display:block}
 .detail-back {float:right; font-size:28px; line-height:32px; padding:60px 0 0 0}
-.detail-share {float:right; height:32px; border-right:1px solid #999; padding:0 17px 0 0; margin:60px 22px 0 0}
-.detail-share a {display:block; width:29px; height:32px; background:url(../images/detail-share.png); position:relative}
-.detail-share a:hover {background-position:left -32px}
-.detail-share a span {display:none; position:absolute !important; left:50%; margin-left:-75px; top:-45px; width:150px; height:35px; text-align:center; background:#323232; font:18px/35px NissanAGLight, verdana, geneva, sans-serif; color:#fff}
-.detail-share a span:after {content:""; display:block; width:0; height:0; position:absolute; left:50%; bottom:-6px; margin:0 0 0 -7px; border-top:6px solid #323232; border-left:7px solid transparent; border-right:7px solid transparent}
-.detail-share a:hover span {display:block}
+.detail-share {float:right; height:32px; border-right:1px solid #999; padding:0 17px 0 0; margin:60px 22px 0 0; position:relative}
+.detail-share > a {display:block; width:29px; height:32px; background:url(../images/detail-share.png); position:relative}
+.detail-share > a:hover {background-position:left -32px}
+.detail-share > a span {display:none; position:absolute !important; left:50%; margin-left:-75px; top:-45px; width:150px; height:35px; text-align:center; background:#323232; font:18px/35px NissanAGLight, verdana, geneva, sans-serif; color:#fff}
+.detail-share > a span:after {content:""; display:block; width:0; height:0; position:absolute; left:50%; bottom:-6px; margin:0 0 0 -7px; border-top:6px solid #323232; border-left:7px solid transparent; border-right:7px solid transparent}
+.detail-share > a:hover span {display:block}
+.detail-share.open > a:hover span {display:none}
+.detail-share-window {position:absolute; left:50%; bottom:44px; width:158px; height:50px; margin-left:-99999px; background:#f1f1f1; border-bottom:5px solid #e2e2e2}
+.detail-share.open .detail-share-window {margin-left:-79px}
+.detail-share-window:after {content:""; display:block; width:0; height:0; position:absolute; left:50%; bottom:-9px; margin-left:-6px; border-top:4px solid #e2e2e2; border-left:6px solid transparent; border-right:6px solid transparent}
+.detail-share-window-link {float:left; width:33.33%; line-height:50px; text-align:center}
+.detail-share-window-link a {display:inline-block; vertical-align:middle}
+.detail-share-window-link a span {display:none}
+.detail-share-window-link-vk a {width:21px; height:12px; background:url(../images/social-vk.png)}
+.detail-share-window-link-vk a:hover {background-position:left -12px}
+.detail-share-window-link-fb a {width:9px; height:18px; background:url(../images/social-fb.png); cursor:pointer}
+.detail-share-window-link-fb a:hover {background-position:left -18px}
+.detail-share-window-link-tw a {width:20px; height:17px; background:url(../images/social-tw.png)}
+.detail-share-window-link-tw a:hover {background-position:left -17px}
+.detail-url {display:none}
+.detail-anonce {display:none}
 
 @media (max-width:1200px) {
     .detail-photo {float:none; width:auto}
