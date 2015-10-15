@@ -193,10 +193,7 @@
         $('.gallery-item-share-window-link-fb a').click(function(e) {
             var url = $(this).attr('href');
             var curBlock = $(this).parents().filter('.gallery-item');
-            url += '&p[url]=' + encodeURIComponent(curBlock.find('.gallery-item-detail a').attr('href'));
-            url += '&p[title]=' + encodeURIComponent(curBlock.find('.gallery-item-title').html());
-            url += '&p[summary]=' + encodeURIComponent(curBlock.find('.gallery-item-anonce').html());
-            url += '&p[images][0]=' + encodeURIComponent(curBlock.find('.gallery-item-photo img').attr('src'));
+            url += 'u=' + encodeURIComponent(curBlock.find('.gallery-item-detail a').attr('href'));
             window.open(url, 'displayWindow', 'width=700,height=400,left=200,top=100,location=no,directories=no,status=no,toolbar=no,menubar=no');
             e.preventDefault();
         });
@@ -236,10 +233,7 @@
         $('.detail-share-window-link-fb a').click(function(e) {
             var url = $(this).attr('href');
             var curBlock = $(this).parents().filter('.detail');
-            url += '&p[url]=' + encodeURIComponent(curBlock.find('.detail-url').attr('href'));
-            url += '&p[title]=' + encodeURIComponent(curBlock.find('.detail-title').html());
-            url += '&p[summary]=' + encodeURIComponent(curBlock.find('.detail-anonce').html());
-            url += '&p[images][0]=' + encodeURIComponent(curBlock.find('.detail-photo img').attr('src'));
+            url += 'u=' + encodeURIComponent(curBlock.find('.detail-url').attr('href'));
             window.open(url, 'displayWindow', 'width=700,height=400,left=200,top=100,location=no,directories=no,status=no,toolbar=no,menubar=no');
             e.preventDefault();
         });
