@@ -80,27 +80,46 @@
 
         $(document).on('click', 'a.gallery-item-rate, a.detail-rate', function(e) {
             var trigger = $(this);
-            var idea = trigger.attr('rel');
-            $.ajax({
-                method: 'POST',
-                url: '/ajax/vote.php',
-                data: { idea: idea},
-                dataType: 'json'
-            }).done(function(r) {
-                if (r.s == 1) {
-                    if (r.c == '+') {
-                        trigger.addClass('active');
-                        _gaq.push(['_trackEvent', 'ftb_ideas', 'click', 'голос подан']);
+            if (trigger.hasClass('gallery-item-rate-unauth')) {
+                $('.overlay, .window').show();
+            } else {
+                var idea = trigger.attr('rel');
+                $.ajax({
+                    method: 'POST',
+                    url: '/ajax/vote.php',
+                    data: { idea: idea},
+                    dataType: 'json'
+                }).done(function(r) {
+                    if (r.s == 1) {
+                        if (r.c == '+') {
+                            trigger.addClass('active');
+                            _gaq.push(['_trackEvent', 'ftb_ideas', 'click', 'голос подан']);
+                        } else {
+                            trigger.removeClass('active');
+                            _gaq.push(['_trackEvent', 'ftb_ideas', 'click', 'голос отозван']);
+                        }
+                        trigger.html(r.v);
                     } else {
-                        trigger.removeClass('active');
-                        _gaq.push(['_trackEvent', 'ftb_ideas', 'click', 'голос отозван']);
+                        alert(r.m);
                     }
-                    trigger.html(r.v);
-                } else {
-                    alert(r.m);
-                }
-            });
+                });
+            }
             e.preventDefault(e);
+        });
+
+        $('.window-close').click(function(e) {
+            $('.overlay, .window').hide();
+            e.preventDefault();
+        });
+
+        $('.overlay').click(function() {
+            $('.overlay, .window').hide();
+        });
+
+        $('body').bind('keyup', function(e) {
+            if (e.keyCode == 27) {
+                $('.overlay, .window').hide();
+            }
         });
 
         $(document).on('click', '.cabinet-profile-edit-avatar-upload', function(e) {
