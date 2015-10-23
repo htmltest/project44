@@ -266,6 +266,12 @@
             e.preventDefault();
         });
 
+        $('.cabinet-profile-edit-field-input input, .idea-edit-input input, .idea-edit-input textarea').each(function() {
+            if ($(this).attr('placeholder')) {
+                $(this).data('placeholder', $(this).attr('placeholder'));
+            }
+        });
+
     });
 
     $(window).bind('load resize', function() {
@@ -317,7 +323,13 @@
                 $(this).attr('placeholder', $(this).parent().prev().html());
             });
         } else {
-            $('.idea-edit-input input, .idea-edit-input textarea').removeAttr('placeholder');
+            $('.idea-edit-input input, .idea-edit-input textarea').each(function() {
+                if ($(this).data('placeholder')) {
+                    $(this).attr('placeholder', $(this).data('placeholder'));
+                } else {
+                    $(this).removeAttr('placeholder');
+                }
+            });
         }
     });
 
