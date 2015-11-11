@@ -876,8 +876,15 @@ a.popular-sort.active span {background:none}
 .help-us a span:after {content:""; display:block; width:0; height:0; position:absolute; left:50%; bottom:-6px; margin:0 0 0 -7px; border-top:6px solid #323232; border-left:7px solid transparent; border-right:7px solid transparent}
 .help-us a:hover span {display:block}
 
+.help-us-mobile {display:none; padding:12px 0; text-align:center}
+.help-us-mobile a {display:inline-block; position:relative; padding:0 0 0 38px; background:url(../images/help-us-mobile.png) no-repeat 8px top; font-size:12px; line-height:18px; text-decoration:none}
+.help-us-mobile a em {font-style:normal; color:#999; background:url(../images/help-us-link.png) repeat-x left bottom}
+.help-us-mobile a:hover em {color:#777; background:none}
+.help-us-mobile a span {display:none; position:absolute; left:50%; top:-73px; margin-left:-160px; width:320px; height:56px; padding:9px 0 0 27px; text-align:left; background:#323232; font:14px/22px NissanAGLight, verdana, geneva, sans-serif; color:#fff}
+.help-us-mobile a span:after {content:""; display:block; width:0; height:0; position:absolute; left:50%; bottom:-6px; margin:0 0 0 -7px; border-top:6px solid #323232; border-left:7px solid transparent; border-right:7px solid transparent}
+.help-us-mobile a:hover span {display:block}
+
 @media (max-width:1200px) {
-    .help-us {text-align:center; padding:27px 0}
-    .help-us a span {left:50%; margin-left:-160px; font-size:14px; width:320px}
-    .help-us a {font-size:16px}
+    .help-us {display:none}
+    .help-us-mobile {display:block}
 }
